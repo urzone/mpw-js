@@ -1,35 +1,65 @@
-mpw-js
-======
+# [Spectre](https://spectre.app)
 
-mpw-js is a JavaScript (+ Web Crypto) implementation of the Master Password App ([Lyndir/MasterPassword](https://github.com/Lyndir/MasterPassword)) algorithm (<http://masterpasswordapp.com/algorithm.html>).
+Spectre introduces a completely new way of thinking about passwords.
 
-mpw-js relies on `window.crypto.subtle` when it is available on [modern browser](http://caniuse.com/#feat=cryptography) but will fallback to using [crypto-js](https://code.google.com/p/crypto-js/). It is written in ES6 JS but is transpiled to ES5 JS for browsers that do not yet support ES6 JS. It is purely intended as a proof-of-concept.
+[[_TOC_]]
 
-The `MPW` constructor `constructor(name, password)` accepts two mandatory arguments; `.name` is set to the argument `name` and both `name` and `password` are subsequently passed to `calculateKey`, `.key` being set to the result.
 
-The `MPW` class implements `static calculateKey(name, password)` which is an implementation of step 1 of the algorithm, *Calculate the __master key__ from a user's name and master password*, it accepts two mandatory arguments, the users full name and the users master password; `calculateKey` is invoked automatically by the constructor.
+## Don't store; derive
 
-`MPW` also implements `calculateSeed(site, counter = 1, context = null, NS = MPW.NS)`, an implementation of step 2 of the algorithm, *Calculate the __template seed__ from the site's name and counter*, it accepts four arguments, the name of the site -- potentially it's FQDN -- and a counter -- *This is an integer that can be incremented when the user needs a new password for the site*. The latter two arguments are for extended functionality; `context` is used to provide context to generated security answers and `NS` is used to alter the use of seed, either `MPW.AuthenticationNS` for passwords, `MPW.IdentificationNS` for usernames or `MPW.RecoveryNS` for security answers. `calculateSeed` is invoked automatically by `generate`.
+Every attempt to solve the problem of passwords by means of storing countless unique site-specific tokens inevitably leads to complexity, loss of control, and security compromise.
 
-`MPW` implements the generic `generate(site, counter = 1, context = null, template = "long", NS = MPW.NS)` which is an implementation of step 3 of the algorithm, *Encode a __site password__ using the site's type template*, it accepts five arguments, the name of the site -- potentially it's FQDN -- and a counter -- *This is an integer that can be incremented when the user needs a new password for the site.* -- which are passed to `calculateSeed`, `context` whose use is equal to `calculateSeed` (see above), `template` which refers to any of the 'Password Type Templates' supported by the algorithm -- maximum, long, medium, short, basic or pin, and `NS` whose use is equal to `calculateSeed` (see above).
+Spectre flips the problem on its head by rejecting the notion of statefulness and giving the user a single secret to remember.  The Spectre algorithm then derives whatever secret tokens you need.
 
-`MPW` also implements the specialised functions `generateAuthentication(site, counter = 1, context = "", template = "long")` for generating passwords, the purpose of the arguments of this are equal to those of `generate` (see above); `generateIdentification(site, counter = 1, context = "", template = "name")` for generating usernames, the purpose of the arguments of this are equal to those of `generate` (see above); and `generateRecovery(site, counter = 1, context = "", template = "phrase")` for generating usernames, the purpose of the arguments of this are equal to those of `generate` (see above).
+    site-password = SPECTRE( user-name, user-secret, site-name )
 
-`MPW` also implements `invalidate()` which sets `.key` to a `Promise.reject`, preventing further access to the non-exportable key.
 
-`MPW` finally implements `static test()` which provides a simple, non-rigorous test to ensure correct functionality of the algorithm.
+## How does it work?
 
-Demo
-----
+In short (simplified):
 
-A working demo can be found in the [gh-pages branch](https://github.com/tmthrgd/mpw-js/tree/gh-pages) and at <https://tmthrgd.github.io/mpw-js/>.
+    user-key = SCRYPT( user-name, user-secret )
+    site-key = HMAC-SHA-256( site-name . site-counter, user-key )
+    site-password = PW( site-template, site-key )
 
-Dependencies
-------------
+Consequently, Spectre can derive any `site-password` given the necessary base ingredients (ie. the `user-name`, `user-secret`, `site-name`, `site-counter` and `site-template`).
 
-	npm install -g traceur
+As an example:
 
-License
--------
+    user-name = Robert Lee Mitchell
+    user-secret = banana colored duckling
+    site-name = twitter.com
+    site-counter = 1
+    site-template = Long Password
+    site-password = PozoLalv0_Yelo
 
-This work is licensed under the Creative Commons Attribution 4.0 International License. To view a copy of this license, visit <http://creativecommons.org/licenses/by/4.0/> or see [LICENSE](https://github.com/tmthrgd/mpw-js/blob/master/LICENSE).
+We standardize `user-name` as your full legal name, `site-name` as the domain name that hosts the site, `site-counter` to `1` (unless you explicitly increment it) and `site-template` to `Long Password`; as a result the only token the user really needs to remember is their `user-secret`.
+
+
+# Source Code
+
+Spectre's algorithm and implementation is fully documented and licensed Free Software under the (GPLv3)[LICENSE].
+
+
+## Components
+
+The source is broken down into several components:
+
+ - [api](https://gitlab.com/spectre.app/api): The algorithm's reference implementation and API library.  There is a C, Java and W3C interface.
+ - [cli](https://gitlab.com/spectre.app/cli): The official command-line interface for POSIX systems.
+ - [desktop](https://gitlab.com/spectre.app/desktop): The official cross-platform desktop application.
+ - [macos](https://gitlab.com/spectre.app/macos): The official Apple macOS desktop application.
+ - [ios](https://gitlab.com/spectre.app/ios): The official Apple iOS mobile application.
+ - [android](https://gitlab.com/spectre.app/android): The official Google Android mobile application.
+ - [web](https://gitlab.com/spectre.app/web): The official cross-platform web application.
+ - [www](https://gitlab.com/spectre.app/www): The Spectre homepage.
+
+
+## Building and running
+
+These instructions are for the Apple iOS application.
+
+1. Make sure you have all submodules checked out.
+2. Export application icons into `design/icon`.
+3. Open `Spectre.xcworkspace` in Xcode.
+4. Build & Run.
