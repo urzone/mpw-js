@@ -2,8 +2,6 @@
 
 Spectre introduces a completely new way of thinking about passwords.
 
-[[_TOC_]]
-
 
 ## Don't store; derive
 
@@ -54,12 +52,3 @@ The source is broken down into several components:
  - [web](https://gitlab.com/spectre.app/web): The official cross-platform web application.
  - [www](https://gitlab.com/spectre.app/www): The Spectre homepage.
 
-
-## Building and running
-
-These instructions are for the Apple iOS application.
-
-1. Make sure you have all submodules checked out.
-2. Export application icons into `design/icon`.
-3. Open `Spectre.xcworkspace` in Xcode.
-4. Build & Run.
