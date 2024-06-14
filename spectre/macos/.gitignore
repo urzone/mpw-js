@@ -1,0 +1,31 @@
+# Personal
+/local
+
+# Generated
+/platform-darwin/Podfile.lock
+/platform-darwin/Pods/
+
+# Junk
+.DS_Store
+Thumbs.db
+*~
+
+# IntelliJ
+.idea
+*.iml
+*.ipr
+*.iws
+out
+
+# Xcode IDE
+xcuserdata/
+DerivedData/
+
+# Gradle
+build
+.gradle
+local.properties
+/builds
+/platform-android/.externalNativeBuild
+.cxx
+

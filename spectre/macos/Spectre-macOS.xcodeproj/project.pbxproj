@@ -1,0 +1,2367 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DF43F2BED86F22DD05C2D96 /* Pods_Spectre_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB307EF9666D244E34F13AC /* Pods_Spectre_macOS.framework */; };
+		DA0933CC1747AD2D00DE1CEF /* shot-laptop-leaning-iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0933CB1747AD2D00DE1CEF /* shot-laptop-leaning-iphone.png */; };
+		DA09745E1E99586600F0BFE8 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DA09745D1E99586600F0BFE8 /* libxml2.tbd */; };
+		DA0B3F4E229EEEB20080C8C8 /* libjson-c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA0B3F4C229EEE980080C8C8 /* libjson-c.a */; };
+		DA0B3F50229EEEC00080C8C8 /* libsodium.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA0B3F4F229EEEC00080C8C8 /* libsodium.a */; };
+		DA0B3F52229EEF730080C8C8 /* libcurses.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DA0B3F51229EEF730080C8C8 /* libcurses.tbd */; };
+		DA0CC53E1EB57B69009A8ED9 /* Fabric.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA0CC53D1EB57B69009A8ED9 /* Fabric.plist */; };
+		DA16B341170661DB000A0EAB /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA16B340170661DB000A0EAB /* Carbon.framework */; };
+		DA16B342170661E0000A0EAB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAC632871486D95D0075AEA5 /* Security.framework */; };
+		DA16B344170661EE000A0EAB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA16B343170661EE000A0EAB /* Cocoa.framework */; };
+		DA16B345170661F2000A0EAB /* libPearl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAC77CAD148291A600BCF976 /* libPearl.a */; };
+		DA1C7AAA1F1A8F24009A3551 /* mpw-marshal.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA449D31EEC4B6B00E7BDD5 /* mpw-marshal.c */; };
+		DA1C7AAB1F1A8F24009A3551 /* mpw-types.c in Sources */ = {isa = PBXBuildFile; fileRef = DA6773C21A4746AF004F356A /* mpw-types.c */; };
+		DA1C7AAC1F1A8F24009A3551 /* mpw-util.c in Sources */ = {isa = PBXBuildFile; fileRef = DA6773C51A4746AF004F356A /* mpw-util.c */; };
+		DA1C7AAD1F1A8F24009A3551 /* mpw-algorithm.c in Sources */ = {isa = PBXBuildFile; fileRef = DA6773BB1A4746AF004F356A /* mpw-algorithm.c */; };
+		DA1C7AB01F1A8F24009A3551 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DA09745D1E99586600F0BFE8 /* libxml2.tbd */; };
+		DA1C7AC31F1A8FBA009A3551 /* mpw-cli.c in Sources */ = {isa = PBXBuildFile; fileRef = DA1C7AB91F1A8F6E009A3551 /* mpw-cli.c */; };
+		DA1C7ACA1F1A8FD8009A3551 /* mpw-types.c in Sources */ = {isa = PBXBuildFile; fileRef = DA6773C21A4746AF004F356A /* mpw-types.c */; };
+		DA1C7ACB1F1A8FD8009A3551 /* mpw-util.c in Sources */ = {isa = PBXBuildFile; fileRef = DA6773C51A4746AF004F356A /* mpw-util.c */; };
+		DA1C7ACD1F1A8FD8009A3551 /* mpw-algorithm.c in Sources */ = {isa = PBXBuildFile; fileRef = DA6773BB1A4746AF004F356A /* mpw-algorithm.c */; };
+		DA1C7AD01F1A8FD8009A3551 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DA09745D1E99586600F0BFE8 /* libxml2.tbd */; };
+		DA1C7AD71F1A8FE6009A3551 /* mpw-bench.c in Sources */ = {isa = PBXBuildFile; fileRef = DA1C7AB81F1A8F6E009A3551 /* mpw-bench.c */; };
+		DA1C7AD81F1A8FF4009A3551 /* mpw-tests-util.c in Sources */ = {isa = PBXBuildFile; fileRef = DA1C7ABA1F1A8F6E009A3551 /* mpw-tests-util.c */; };
+		DA1C7AD91F1A8FF4009A3551 /* mpw-tests.c in Sources */ = {isa = PBXBuildFile; fileRef = DA1C7ABC1F1A8F6E009A3551 /* mpw-tests.c */; };
+		DA2508F119511D3600AC23F1 /* MPPasswordWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA2508F019511D3600AC23F1 /* MPPasswordWindowController.xib */; };
+		DA250925195148E200AC23F1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAEBC45214F6364500987BF6 /* QuartzCore.framework */; };
+		DA35148E233EF93E00BCF504 /* mpw-algorithm_v0.c in Sources */ = {isa = PBXBuildFile; fileRef = DA831A271A6E1146000AC234 /* mpw-algorithm_v0.c */; };
+		DA35148F233EF93E00BCF504 /* mpw-algorithm_v1.c in Sources */ = {isa = PBXBuildFile; fileRef = DA831A281A6E1146000AC234 /* mpw-algorithm_v1.c */; };
+		DA351490233EF93E00BCF504 /* mpw-algorithm_v2.c in Sources */ = {isa = PBXBuildFile; fileRef = DA831A291A6E1146000AC234 /* mpw-algorithm_v2.c */; };
+		DA351491233EF93E00BCF504 /* mpw-algorithm_v3.c in Sources */ = {isa = PBXBuildFile; fileRef = DA831A2A1A6E1146000AC234 /* mpw-algorithm_v3.c */; };
+		DA351492233EF94300BCF504 /* mpw-algorithm_v0.c in Sources */ = {isa = PBXBuildFile; fileRef = DA831A271A6E1146000AC234 /* mpw-algorithm_v0.c */; };
+		DA351493233EF94300BCF504 /* mpw-algorithm_v1.c in Sources */ = {isa = PBXBuildFile; fileRef = DA831A281A6E1146000AC234 /* mpw-algorithm_v1.c */; };
+		DA351494233EF94300BCF504 /* mpw-algorithm_v2.c in Sources */ = {isa = PBXBuildFile; fileRef = DA831A291A6E1146000AC234 /* mpw-algorithm_v2.c */; };
+		DA351495233EF94300BCF504 /* mpw-algorithm_v3.c in Sources */ = {isa = PBXBuildFile; fileRef = DA831A2A1A6E1146000AC234 /* mpw-algorithm_v3.c */; };
+		DA351496233EF94300BCF504 /* mpw-algorithm_v0.c in Sources */ = {isa = PBXBuildFile; fileRef = DA831A271A6E1146000AC234 /* mpw-algorithm_v0.c */; };
+		DA351497233EF94300BCF504 /* mpw-algorithm_v1.c in Sources */ = {isa = PBXBuildFile; fileRef = DA831A281A6E1146000AC234 /* mpw-algorithm_v1.c */; };
+		DA351498233EF94300BCF504 /* mpw-algorithm_v2.c in Sources */ = {isa = PBXBuildFile; fileRef = DA831A291A6E1146000AC234 /* mpw-algorithm_v2.c */; };
+		DA351499233EF94300BCF504 /* mpw-algorithm_v3.c in Sources */ = {isa = PBXBuildFile; fileRef = DA831A2A1A6E1146000AC234 /* mpw-algorithm_v3.c */; };
+		DA35149A233EF94500BCF504 /* mpw-algorithm_v0.c in Sources */ = {isa = PBXBuildFile; fileRef = DA831A271A6E1146000AC234 /* mpw-algorithm_v0.c */; };
+		DA35149B233EF94500BCF504 /* mpw-algorithm_v1.c in Sources */ = {isa = PBXBuildFile; fileRef = DA831A281A6E1146000AC234 /* mpw-algorithm_v1.c */; };
+		DA35149C233EF94500BCF504 /* mpw-algorithm_v2.c in Sources */ = {isa = PBXBuildFile; fileRef = DA831A291A6E1146000AC234 /* mpw-algorithm_v2.c */; };
+		DA35149D233EF94500BCF504 /* mpw-algorithm_v3.c in Sources */ = {isa = PBXBuildFile; fileRef = DA831A2A1A6E1146000AC234 /* mpw-algorithm_v3.c */; };
+		DA3BCFCD19BD09E0006B2681 /* SourceCodePro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = DA3BCFCC19BD09E0006B2681 /* SourceCodePro-Regular.otf */; };
+		DA4DA1D91564471A00F6F596 /* libjrswizzle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAC6326C148680650075AEA5 /* libjrswizzle.a */; };
+		DA5B0B3A1F36467300B663F0 /* base64.c in Sources */ = {isa = PBXBuildFile; fileRef = DA5B0B381F36467300B663F0 /* base64.c */; };
+		DA5B0B3B1F36467800B663F0 /* base64.c in Sources */ = {isa = PBXBuildFile; fileRef = DA5B0B381F36467300B663F0 /* base64.c */; };
+		DA5B0B3C1F36467900B663F0 /* base64.c in Sources */ = {isa = PBXBuildFile; fileRef = DA5B0B381F36467300B663F0 /* base64.c */; };
+		DA5B0B3D1F36467900B663F0 /* base64.c in Sources */ = {isa = PBXBuildFile; fileRef = DA5B0B381F36467300B663F0 /* base64.c */; };
+		DA5E5D081724A667003798D8 /* MasterPassword.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = DA5E5CBF1724A667003798D8 /* MasterPassword.entitlements */; };
+		DA5E5D0A1724A667003798D8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA5E5CC21724A667003798D8 /* InfoPlist.strings */; };
+		DA5E5D0B1724A667003798D8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA5E5CC41724A667003798D8 /* MainMenu.xib */; };
+		DA6558A419A99609009A0BEB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA6558A319A99609009A0BEB /* Images.xcassets */; };
+		DA6774291A4746AF004F356A /* mpw-algorithm.c in Sources */ = {isa = PBXBuildFile; fileRef = DA6773BB1A4746AF004F356A /* mpw-algorithm.c */; };
+		DA67742F1A4746AF004F356A /* mpw-types.c in Sources */ = {isa = PBXBuildFile; fileRef = DA6773C21A4746AF004F356A /* mpw-types.c */; };
+		DA6774311A4746AF004F356A /* mpw-util.c in Sources */ = {isa = PBXBuildFile; fileRef = DA6773C51A4746AF004F356A /* mpw-util.c */; };
+		DA6774431A474A3B004F356A /* mpw-algorithm.c in Sources */ = {isa = PBXBuildFile; fileRef = DA6773BB1A4746AF004F356A /* mpw-algorithm.c */; };
+		DA6774451A474A3B004F356A /* mpw-types.c in Sources */ = {isa = PBXBuildFile; fileRef = DA6773C21A4746AF004F356A /* mpw-types.c */; };
+		DA6774461A474A3B004F356A /* mpw-util.c in Sources */ = {isa = PBXBuildFile; fileRef = DA6773C51A4746AF004F356A /* mpw-util.c */; };
+		DA69E97D2335584C007482D5 /* libsodium.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA0B3F4F229EEEC00080C8C8 /* libsodium.a */; };
+		DA69E97E23355852007482D5 /* libsodium.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA0B3F4F229EEEC00080C8C8 /* libsodium.a */; };
+		DA7471A31F2B71AE005F3468 /* mpw-marshal-util.c in Sources */ = {isa = PBXBuildFile; fileRef = DA7471A01F2B71A9005F3468 /* mpw-marshal-util.c */; };
+		DA7471A61F2B71B9005F3468 /* mpw-marshal-util.c in Sources */ = {isa = PBXBuildFile; fileRef = DA7471A01F2B71A9005F3468 /* mpw-marshal-util.c */; };
+		DA9261541BE1A88900369DE5 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9261531BE1A88900369DE5 /* libc++.tbd */; };
+		DA9261561BE1A89600369DE5 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9261551BE1A89600369DE5 /* libz.tbd */; };
+		DAA449D51EEC4B6B00E7BDD5 /* mpw-marshal.c in Sources */ = {isa = PBXBuildFile; fileRef = DAA449D31EEC4B6B00E7BDD5 /* mpw-marshal.c */; };
+		DAADCC4B19FB000C00987B1D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAEBC45214F6364500987BF6 /* QuartzCore.framework */; };
+		DAADCC6A19FB00B500987B1D /* libKCOrderedAccessorFix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAADCC5019FB006500987B1D /* libKCOrderedAccessorFix.a */; };
+		DAAF16661F5CA3240013B8AE /* mpw-cli-util.c in Sources */ = {isa = PBXBuildFile; fileRef = DAAF16631F5897EA0013B8AE /* mpw-cli-util.c */; };
+		DAB07CA01F7725D400CC6D43 /* aes.c in Sources */ = {isa = PBXBuildFile; fileRef = DAB07C9E1F7725D400CC6D43 /* aes.c */; };
+		DAB07CA31F77261400CC6D43 /* aes.c in Sources */ = {isa = PBXBuildFile; fileRef = DAB07C9E1F7725D400CC6D43 /* aes.c */; };
+		DAB07CA51F77261C00CC6D43 /* aes.c in Sources */ = {isa = PBXBuildFile; fileRef = DAB07C9E1F7725D400CC6D43 /* aes.c */; };
+		DAB07CA61F77262400CC6D43 /* aes.c in Sources */ = {isa = PBXBuildFile; fileRef = DAB07C9E1F7725D400CC6D43 /* aes.c */; };
+		DAB7AE5B1F3D750B00C856B1 /* libjson-c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAB7AE591F3D74E700C856B1 /* libjson-c.a */; };
+		DAC6326D148680650075AEA5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA5BFA4A147E415C00F98B1E /* Foundation.framework */; };
+		DAC77CAE148291A600BCF976 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA5BFA4A147E415C00F98B1E /* Foundation.framework */; };
+		DAC793E9204CE79900EC597C /* cloud@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC793DC204CE79800EC597C /* cloud@2x.png */; };
+		DAC793EA204CE79900EC597C /* identity.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC793DD204CE79800EC597C /* identity.png */; };
+		DAC793EB204CE79900EC597C /* empty.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC793DE204CE79800EC597C /* empty.png */; };
+		DAC793EC204CE79900EC597C /* cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC793DF204CE79800EC597C /* cloud.png */; };
+		DAC793ED204CE79900EC597C /* empty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC793E0204CE79800EC597C /* empty@2x.png */; };
+		DAC793EE204CE79900EC597C /* unlocked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC793E1204CE79800EC597C /* unlocked@2x.png */; };
+		DAC793EF204CE79900EC597C /* lock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC793E2204CE79800EC597C /* lock@2x.png */; };
+		DAC793F0204CE79900EC597C /* play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC793E3204CE79800EC597C /* play@2x.png */; };
+		DAC793F1204CE79900EC597C /* menu-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC793E4204CE79800EC597C /* menu-icon@2x.png */; };
+		DAC793F2204CE79900EC597C /* unlocked.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC793E5204CE79900EC597C /* unlocked.png */; };
+		DAC793F3204CE79900EC597C /* identity@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC793E6204CE79900EC597C /* identity@2x.png */; };
+		DAC793F4204CE79900EC597C /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC793E7204CE79900EC597C /* lock.png */; };
+		DAC793F5204CE79900EC597C /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC793E8204CE79900EC597C /* play.png */; };
+		DAC793F8204CE7A300EC597C /* avatar-add.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC793F6204CE7A200EC597C /* avatar-add.png */; };
+		DAC793F9204CE7A300EC597C /* avatar-add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC793F7204CE7A200EC597C /* avatar-add@2x.png */; };
+		DACA26FE1705DF81002C6C22 /* logo-bare.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA241C1705DF7D002C6C22 /* logo-bare.png */; };
+		DACA27121705DF81002C6C22 /* avatar-13@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA24321705DF7D002C6C22 /* avatar-13@2x.png */; };
+		DACA27131705DF81002C6C22 /* avatar-3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA24331705DF7D002C6C22 /* avatar-3@2x.png */; };
+		DACA27141705DF81002C6C22 /* avatar-7.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA24341705DF7D002C6C22 /* avatar-7.png */; };
+		DACA27151705DF81002C6C22 /* avatar-0.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA24351705DF7D002C6C22 /* avatar-0.png */; };
+		DACA27161705DF81002C6C22 /* avatar-12.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA24361705DF7D002C6C22 /* avatar-12.png */; };
+		DACA27171705DF81002C6C22 /* avatar-15.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA24371705DF7D002C6C22 /* avatar-15.png */; };
+		DACA27181705DF81002C6C22 /* avatar-9.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA24381705DF7D002C6C22 /* avatar-9.png */; };
+		DACA27191705DF81002C6C22 /* avatar-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA24391705DF7D002C6C22 /* avatar-1@2x.png */; };
+		DACA271A1705DF81002C6C22 /* avatar-11@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA243A1705DF7D002C6C22 /* avatar-11@2x.png */; };
+		DACA271B1705DF81002C6C22 /* avatar-7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA243B1705DF7D002C6C22 /* avatar-7@2x.png */; };
+		DACA271C1705DF81002C6C22 /* avatar-17@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA243C1705DF7D002C6C22 /* avatar-17@2x.png */; };
+		DACA271D1705DF81002C6C22 /* avatar-14.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA243D1705DF7D002C6C22 /* avatar-14.png */; };
+		DACA271E1705DF81002C6C22 /* avatar-18@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA243E1705DF7D002C6C22 /* avatar-18@2x.png */; };
+		DACA271F1705DF81002C6C22 /* avatar-8.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA243F1705DF7D002C6C22 /* avatar-8.png */; };
+		DACA27201705DF81002C6C22 /* avatar-13.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA24401705DF7D002C6C22 /* avatar-13.png */; };
+		DACA27211705DF81002C6C22 /* avatar-8@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA24411705DF7D002C6C22 /* avatar-8@2x.png */; };
+		DACA27221705DF81002C6C22 /* avatar-1.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA24421705DF7D002C6C22 /* avatar-1.png */; };
+		DACA27231705DF81002C6C22 /* avatar-15@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA24431705DF7D002C6C22 /* avatar-15@2x.png */; };
+		DACA27241705DF81002C6C22 /* avatar-5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA24441705DF7D002C6C22 /* avatar-5@2x.png */; };
+		DACA27251705DF81002C6C22 /* avatar-6.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA24451705DF7D002C6C22 /* avatar-6.png */; };
+		DACA27261705DF81002C6C22 /* avatar-6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA24461705DF7D002C6C22 /* avatar-6@2x.png */; };
+		DACA27271705DF81002C6C22 /* avatar-16@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA24471705DF7D002C6C22 /* avatar-16@2x.png */; };
+		DACA27281705DF81002C6C22 /* avatar-10.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA24481705DF7D002C6C22 /* avatar-10.png */; };
+		DACA27291705DF81002C6C22 /* avatar-17.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA24491705DF7D002C6C22 /* avatar-17.png */; };
+		DACA272A1705DF81002C6C22 /* avatar-5.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA244A1705DF7D002C6C22 /* avatar-5.png */; };
+		DACA272B1705DF81002C6C22 /* avatar-2.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA244B1705DF7D002C6C22 /* avatar-2.png */; };
+		DACA272C1705DF81002C6C22 /* avatar-14@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA244C1705DF7D002C6C22 /* avatar-14@2x.png */; };
+		DACA272D1705DF81002C6C22 /* avatar-4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA244D1705DF7D002C6C22 /* avatar-4@2x.png */; };
+		DACA272E1705DF81002C6C22 /* avatar-9@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA244E1705DF7D002C6C22 /* avatar-9@2x.png */; };
+		DACA272F1705DF81002C6C22 /* avatar-3.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA244F1705DF7D002C6C22 /* avatar-3.png */; };
+		DACA27301705DF81002C6C22 /* avatar-18.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA24501705DF7D002C6C22 /* avatar-18.png */; };
+		DACA27311705DF81002C6C22 /* avatar-4.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA24511705DF7D002C6C22 /* avatar-4.png */; };
+		DACA27321705DF81002C6C22 /* avatar-16.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA24521705DF7D002C6C22 /* avatar-16.png */; };
+		DACA27331705DF81002C6C22 /* avatar-12@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA24531705DF7D002C6C22 /* avatar-12@2x.png */; };
+		DACA27341705DF81002C6C22 /* avatar-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA24541705DF7D002C6C22 /* avatar-2@2x.png */; };
+		DACA27351705DF81002C6C22 /* avatar-11.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA24551705DF7D002C6C22 /* avatar-11.png */; };
+		DACA27361705DF81002C6C22 /* avatar-0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA24561705DF7D002C6C22 /* avatar-0@2x.png */; };
+		DACA27371705DF81002C6C22 /* avatar-10@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA24571705DF7D002C6C22 /* avatar-10@2x.png */; };
+		DACA27381705DF81002C6C22 /* menu-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DACA24581705DF7D002C6C22 /* menu-icon.png */; };
+		DACA29671705DF81002C6C22 /* SourceCodePro-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = DACA268E1705DF81002C6C22 /* SourceCodePro-ExtraLight.otf */; };
+		DACA29681705DF81002C6C22 /* SourceCodePro-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = DACA268F1705DF81002C6C22 /* SourceCodePro-Black.otf */; };
+		DACA29741705E1A8002C6C22 /* dictionary.lst in Resources */ = {isa = PBXBuildFile; fileRef = DACA29721705E1A8002C6C22 /* dictionary.lst */; };
+		DAD9B5F01762CAA4001835F9 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD9B5EF1762CAA4001835F9 /* ServiceManagement.framework */; };
+		DAD9B5F11762CAB9001835F9 /* MasterPassword-Mac-LoginHelper.app in Copy LoginHelper */ = {isa = PBXBuildFile; fileRef = DAD9B5E6176299BA001835F9 /* MasterPassword-Mac-LoginHelper.app */; };
+		DAEB942E18B47FB3000490CC /* MPInitialWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA0933C91747A56A00DE1CEF /* MPInitialWindow.xib */; };
+		DAF4EF56190A828100023C90 /* Exo2.0-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = DAF4EF52190A828100023C90 /* Exo2.0-Thin.otf */; };
+		DAF4EF57190A828100023C90 /* Exo2.0-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = DAF4EF53190A828100023C90 /* Exo2.0-Regular.otf */; };
+		DAF4EF58190A828100023C90 /* Exo2.0-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DAF4EF54190A828100023C90 /* Exo2.0-ExtraBold.otf */; };
+		DAF4EF59190A828100023C90 /* Exo2.0-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DAF4EF55190A828100023C90 /* Exo2.0-Bold.otf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DAB7AE341F3D423600C856B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA5BFA3B147E415C00F98B1E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA5B0B611F3D416500B663F0;
+			remoteInfo = "libsodium-osx";
+		};
+		DAB7AE361F3D423D00C856B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA5BFA3B147E415C00F98B1E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA5B0B611F3D416500B663F0;
+			remoteInfo = "libsodium-osx";
+		};
+		DAB7AE381F3D424200C856B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA5BFA3B147E415C00F98B1E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA5B0B611F3D416500B663F0;
+			remoteInfo = "libsodium-osx";
+		};
+		DAB7AE3A1F3D424700C856B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA5BFA3B147E415C00F98B1E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA5B0B611F3D416500B663F0;
+			remoteInfo = "libsodium-osx";
+		};
+		DAB7AE511F3D649400C856B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA5BFA3B147E415C00F98B1E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAB7AE421F3D466D00C856B1;
+			remoteInfo = "libjson-c";
+		};
+		DAB7AE571F3D64A600C856B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA5BFA3B147E415C00F98B1E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAB7AE421F3D466D00C856B1;
+			remoteInfo = "libjson-c";
+		};
+		DABFA071176E3FDF00E83589 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAD9B5E1176299B9001835F9 /* MasterPassword-Mac-LoginHelper.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = DAD9B5C0176299B9001835F9;
+			remoteInfo = "MasterPassword-Mac-LoginHelper";
+		};
+		DAC63285148681200075AEA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA5BFA3B147E415C00F98B1E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAC6326B148680650075AEA5;
+			remoteInfo = jrswizzle;
+		};
+		DAD9B5E5176299BA001835F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAD9B5E1176299B9001835F9 /* MasterPassword-Mac-LoginHelper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DAD9B5C1176299B9001835F9;
+			remoteInfo = "MasterPassword-Mac-LoginHelper";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DA1C7AB11F1A8F24009A3551 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		DA1C7AD11F1A8FD8009A3551 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		DA6774391A474A03004F356A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		DAADCC4E19FB006500987B1D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAD9B5EE1762CA3A001835F9 /* Copy LoginHelper */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				DAD9B5F11762CAB9001835F9 /* MasterPassword-Mac-LoginHelper.app in Copy LoginHelper */,
+			);
+			name = "Copy LoginHelper";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		03F3309387AF61F6E0AA7FCC /* Pods-Spectre-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spectre-macOS.debug.xcconfig"; path = "Target Support Files/Pods-Spectre-macOS/Pods-Spectre-macOS.debug.xcconfig"; sourceTree = "<group>"; };
+		2DB307EF9666D244E34F13AC /* Pods_Spectre_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spectre_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1E434F9A1F32A8AE7083172 /* Pods-Spectre-macOS.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spectre-macOS.test.xcconfig"; path = "Target Support Files/Pods-Spectre-macOS/Pods-Spectre-macOS.test.xcconfig"; sourceTree = "<group>"; };
+		DA0933C91747A56A00DE1CEF /* MPInitialWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPInitialWindow.xib; sourceTree = "<group>"; };
+		DA0933CB1747AD2D00DE1CEF /* shot-laptop-leaning-iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shot-laptop-leaning-iphone.png"; sourceTree = "<group>"; };
+		DA09745D1E99586600F0BFE8 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		DA09745F1E995EB500F0BFE8 /* mpw_tests.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = mpw_tests.xml; path = ../../core/java/tests/src/main/resources/mpw_tests.xml; sourceTree = "<group>"; };
+		DA0B3F4C229EEE980080C8C8 /* libjson-c.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libjson-c.a"; path = "../lib/libjson-c/build-macos~/out/lib/libjson-c.a"; sourceTree = "<group>"; };
+		DA0B3F4F229EEEC00080C8C8 /* libsodium.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsodium.a; path = "../lib/libsodium/build-macos~/out/lib/libsodium.a"; sourceTree = "<group>"; };
+		DA0B3F51229EEF730080C8C8 /* libcurses.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcurses.tbd; path = usr/lib/libcurses.tbd; sourceTree = SDKROOT; };
+		DA0CC53D1EB57B69009A8ED9 /* Fabric.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Fabric.plist; sourceTree = "<group>"; };
+		DA16B340170661DB000A0EAB /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		DA16B343170661EE000A0EAB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		DA1C7AB61F1A8F24009A3551 /* mpw-cli */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "mpw-cli"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA1C7AB81F1A8F6E009A3551 /* mpw-bench.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "mpw-bench.c"; sourceTree = "<group>"; };
+		DA1C7AB91F1A8F6E009A3551 /* mpw-cli.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "mpw-cli.c"; sourceTree = "<group>"; };
+		DA1C7ABA1F1A8F6E009A3551 /* mpw-tests-util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "mpw-tests-util.c"; sourceTree = "<group>"; };
+		DA1C7ABB1F1A8F6E009A3551 /* mpw-tests-util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "mpw-tests-util.h"; sourceTree = "<group>"; };
+		DA1C7ABC1F1A8F6E009A3551 /* mpw-tests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "mpw-tests.c"; sourceTree = "<group>"; };
+		DA1C7AD61F1A8FD8009A3551 /* mpw-bench */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "mpw-bench"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA2508F019511D3600AC23F1 /* MPPasswordWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPPasswordWindowController.xib; sourceTree = "<group>"; };
+		DA2508F919513C1400AC23F1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DA2508FA19513C1400AC23F1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DA2508FB19513C1400AC23F1 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		DA351482233EF8E800BCF504 /* mpw-algorithm_v3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "mpw-algorithm_v3.h"; sourceTree = "<group>"; };
+		DA351483233EF8E800BCF504 /* mpw-algorithm_v0.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "mpw-algorithm_v0.h"; sourceTree = "<group>"; };
+		DA351484233EF8E800BCF504 /* mpw-algorithm_v2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "mpw-algorithm_v2.h"; sourceTree = "<group>"; };
+		DA351485233EF8E800BCF504 /* mpw-algorithm_v1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "mpw-algorithm_v1.h"; sourceTree = "<group>"; };
+		DA3BCFCC19BD09E0006B2681 /* SourceCodePro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceCodePro-Regular.otf"; sourceTree = "<group>"; };
+		DA456CA21F5307B700D54152 /* blf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blf.h; sourceTree = "<group>"; };
+		DA4571171F552C9500D54152 /* bcrypt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bcrypt.c; sourceTree = "<group>"; };
+		DA4571181F552C9500D54152 /* blowfish.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = blowfish.c; sourceTree = "<group>"; };
+		DA5B0B381F36467300B663F0 /* base64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = base64.c; sourceTree = "<group>"; };
+		DA5B0B391F36467300B663F0 /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
+		DA5BFA44147E415C00F98B1E /* Spectre-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spectre-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA5BFA4A147E415C00F98B1E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DA5BFA4C147E415C00F98B1E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DA5BFA4E147E415C00F98B1E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DA5E5CBF1724A667003798D8 /* MasterPassword.entitlements */ = {isa = PBXFileReference; fileEncoding = 1; lastKnownFileType = text.xml; path = MasterPassword.entitlements; sourceTree = "<group>"; };
+		DA5E5CC31724A667003798D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DA6558A319A99609009A0BEB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DA6701B716406A4100B61001 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		DA6701DD16406B7300B61001 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		DA6773BB1A4746AF004F356A /* mpw-algorithm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "mpw-algorithm.c"; sourceTree = "<group>"; };
+		DA6773BC1A4746AF004F356A /* mpw-algorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "mpw-algorithm.h"; sourceTree = "<group>"; };
+		DA6773C21A4746AF004F356A /* mpw-types.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "mpw-types.c"; sourceTree = "<group>"; };
+		DA6773C31A4746AF004F356A /* mpw-types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "mpw-types.h"; sourceTree = "<group>"; };
+		DA6773C51A4746AF004F356A /* mpw-util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "mpw-util.c"; sourceTree = "<group>"; };
+		DA6773C61A4746AF004F356A /* mpw-util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "mpw-util.h"; sourceTree = "<group>"; };
+		DA67743B1A474A03004F356A /* mpw-test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "mpw-test"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA7471A01F2B71A9005F3468 /* mpw-marshal-util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "mpw-marshal-util.c"; sourceTree = "<group>"; };
+		DA7471A11F2B71A9005F3468 /* mpw-marshal-util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "mpw-marshal-util.h"; sourceTree = "<group>"; };
+		DA771FE51E6E15A1004D7EDE /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		DA831A271A6E1146000AC234 /* mpw-algorithm_v0.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "mpw-algorithm_v0.c"; sourceTree = "<group>"; };
+		DA831A281A6E1146000AC234 /* mpw-algorithm_v1.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "mpw-algorithm_v1.c"; sourceTree = "<group>"; };
+		DA831A291A6E1146000AC234 /* mpw-algorithm_v2.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "mpw-algorithm_v2.c"; sourceTree = "<group>"; };
+		DA831A2A1A6E1146000AC234 /* mpw-algorithm_v3.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "mpw-algorithm_v3.c"; sourceTree = "<group>"; };
+		DA9261531BE1A88900369DE5 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		DA9261551BE1A89600369DE5 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		DAA449D31EEC4B6B00E7BDD5 /* mpw-marshal.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "mpw-marshal.c"; sourceTree = "<group>"; };
+		DAA449D41EEC4B6B00E7BDD5 /* mpw-marshal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "mpw-marshal.h"; sourceTree = "<group>"; };
+		DAADCC5019FB006500987B1D /* libKCOrderedAccessorFix.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKCOrderedAccessorFix.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAAF16631F5897EA0013B8AE /* mpw-cli-util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "mpw-cli-util.c"; sourceTree = "<group>"; };
+		DAAF16641F5897EA0013B8AE /* mpw-cli-util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "mpw-cli-util.h"; sourceTree = "<group>"; };
+		DAB07C9E1F7725D400CC6D43 /* aes.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aes.c; sourceTree = "<group>"; };
+		DAB07C9F1F7725D400CC6D43 /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
+		DAB7AE591F3D74E700C856B1 /* libjson-c.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libjson-c.a"; path = "External/libjson-c/libjson-c-osx/lib/libjson-c.a"; sourceTree = "<group>"; };
+		DABB981515100B4000B05417 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DAC6326C148680650075AEA5 /* libjrswizzle.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libjrswizzle.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAC632871486D95D0075AEA5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		DAC77CAD148291A600BCF976 /* libPearl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPearl.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAC793DC204CE79800EC597C /* cloud@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cloud@2x.png"; sourceTree = "<group>"; };
+		DAC793DD204CE79800EC597C /* identity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = identity.png; sourceTree = "<group>"; };
+		DAC793DE204CE79800EC597C /* empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = empty.png; sourceTree = "<group>"; };
+		DAC793DF204CE79800EC597C /* cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud.png; sourceTree = "<group>"; };
+		DAC793E0204CE79800EC597C /* empty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "empty@2x.png"; sourceTree = "<group>"; };
+		DAC793E1204CE79800EC597C /* unlocked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unlocked@2x.png"; sourceTree = "<group>"; };
+		DAC793E2204CE79800EC597C /* lock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lock@2x.png"; sourceTree = "<group>"; };
+		DAC793E3204CE79800EC597C /* play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@2x.png"; sourceTree = "<group>"; };
+		DAC793E4204CE79800EC597C /* menu-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-icon@2x.png"; sourceTree = "<group>"; };
+		DAC793E5204CE79900EC597C /* unlocked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unlocked.png; sourceTree = "<group>"; };
+		DAC793E6204CE79900EC597C /* identity@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "identity@2x.png"; sourceTree = "<group>"; };
+		DAC793E7204CE79900EC597C /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock.png; sourceTree = "<group>"; };
+		DAC793E8204CE79900EC597C /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		DAC793F6204CE7A200EC597C /* avatar-add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-add.png"; sourceTree = "<group>"; };
+		DAC793F7204CE7A200EC597C /* avatar-add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-add@2x.png"; sourceTree = "<group>"; };
+		DACA241C1705DF7D002C6C22 /* logo-bare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-bare.png"; sourceTree = "<group>"; };
+		DACA24321705DF7D002C6C22 /* avatar-13@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-13@2x.png"; sourceTree = "<group>"; };
+		DACA24331705DF7D002C6C22 /* avatar-3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-3@2x.png"; sourceTree = "<group>"; };
+		DACA24341705DF7D002C6C22 /* avatar-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-7.png"; sourceTree = "<group>"; };
+		DACA24351705DF7D002C6C22 /* avatar-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-0.png"; sourceTree = "<group>"; };
+		DACA24361705DF7D002C6C22 /* avatar-12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-12.png"; sourceTree = "<group>"; };
+		DACA24371705DF7D002C6C22 /* avatar-15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-15.png"; sourceTree = "<group>"; };
+		DACA24381705DF7D002C6C22 /* avatar-9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-9.png"; sourceTree = "<group>"; };
+		DACA24391705DF7D002C6C22 /* avatar-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-1@2x.png"; sourceTree = "<group>"; };
+		DACA243A1705DF7D002C6C22 /* avatar-11@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-11@2x.png"; sourceTree = "<group>"; };
+		DACA243B1705DF7D002C6C22 /* avatar-7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-7@2x.png"; sourceTree = "<group>"; };
+		DACA243C1705DF7D002C6C22 /* avatar-17@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-17@2x.png"; sourceTree = "<group>"; };
+		DACA243D1705DF7D002C6C22 /* avatar-14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-14.png"; sourceTree = "<group>"; };
+		DACA243E1705DF7D002C6C22 /* avatar-18@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-18@2x.png"; sourceTree = "<group>"; };
+		DACA243F1705DF7D002C6C22 /* avatar-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-8.png"; sourceTree = "<group>"; };
+		DACA24401705DF7D002C6C22 /* avatar-13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-13.png"; sourceTree = "<group>"; };
+		DACA24411705DF7D002C6C22 /* avatar-8@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-8@2x.png"; sourceTree = "<group>"; };
+		DACA24421705DF7D002C6C22 /* avatar-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-1.png"; sourceTree = "<group>"; };
+		DACA24431705DF7D002C6C22 /* avatar-15@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-15@2x.png"; sourceTree = "<group>"; };
+		DACA24441705DF7D002C6C22 /* avatar-5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-5@2x.png"; sourceTree = "<group>"; };
+		DACA24451705DF7D002C6C22 /* avatar-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-6.png"; sourceTree = "<group>"; };
+		DACA24461705DF7D002C6C22 /* avatar-6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-6@2x.png"; sourceTree = "<group>"; };
+		DACA24471705DF7D002C6C22 /* avatar-16@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-16@2x.png"; sourceTree = "<group>"; };
+		DACA24481705DF7D002C6C22 /* avatar-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-10.png"; sourceTree = "<group>"; };
+		DACA24491705DF7D002C6C22 /* avatar-17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-17.png"; sourceTree = "<group>"; };
+		DACA244A1705DF7D002C6C22 /* avatar-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-5.png"; sourceTree = "<group>"; };
+		DACA244B1705DF7D002C6C22 /* avatar-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-2.png"; sourceTree = "<group>"; };
+		DACA244C1705DF7D002C6C22 /* avatar-14@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-14@2x.png"; sourceTree = "<group>"; };
+		DACA244D1705DF7D002C6C22 /* avatar-4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-4@2x.png"; sourceTree = "<group>"; };
+		DACA244E1705DF7D002C6C22 /* avatar-9@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-9@2x.png"; sourceTree = "<group>"; };
+		DACA244F1705DF7D002C6C22 /* avatar-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-3.png"; sourceTree = "<group>"; };
+		DACA24501705DF7D002C6C22 /* avatar-18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-18.png"; sourceTree = "<group>"; };
+		DACA24511705DF7D002C6C22 /* avatar-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-4.png"; sourceTree = "<group>"; };
+		DACA24521705DF7D002C6C22 /* avatar-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-16.png"; sourceTree = "<group>"; };
+		DACA24531705DF7D002C6C22 /* avatar-12@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-12@2x.png"; sourceTree = "<group>"; };
+		DACA24541705DF7D002C6C22 /* avatar-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-2@2x.png"; sourceTree = "<group>"; };
+		DACA24551705DF7D002C6C22 /* avatar-11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-11.png"; sourceTree = "<group>"; };
+		DACA24561705DF7D002C6C22 /* avatar-0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-0@2x.png"; sourceTree = "<group>"; };
+		DACA24571705DF7D002C6C22 /* avatar-10@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar-10@2x.png"; sourceTree = "<group>"; };
+		DACA24581705DF7D002C6C22 /* menu-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-icon.png"; sourceTree = "<group>"; };
+		DACA268E1705DF81002C6C22 /* SourceCodePro-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceCodePro-ExtraLight.otf"; sourceTree = "<group>"; };
+		DACA268F1705DF81002C6C22 /* SourceCodePro-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceCodePro-Black.otf"; sourceTree = "<group>"; };
+		DACA29721705E1A8002C6C22 /* dictionary.lst */ = {isa = PBXFileReference; fileEncoding = 1; lastKnownFileType = text; path = dictionary.lst; sourceTree = "<group>"; };
+		DAD0C5F619FD6034009CB08D /* icon_128x128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_128x128.png; sourceTree = "<group>"; };
+		DAD0C5F719FD6034009CB08D /* icon_128x128@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_128x128@2x.png"; sourceTree = "<group>"; };
+		DAD0C5F819FD6034009CB08D /* icon_16x16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_16x16.png; sourceTree = "<group>"; };
+		DAD0C5F919FD6034009CB08D /* icon_16x16@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_16x16@2x.png"; sourceTree = "<group>"; };
+		DAD0C5FA19FD6034009CB08D /* icon_256x256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_256x256.png; sourceTree = "<group>"; };
+		DAD0C5FB19FD6034009CB08D /* icon_256x256@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_256x256@2x.png"; sourceTree = "<group>"; };
+		DAD0C5FC19FD6034009CB08D /* icon_32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_32x32.png; sourceTree = "<group>"; };
+		DAD0C5FD19FD6034009CB08D /* icon_32x32@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_32x32@2x.png"; sourceTree = "<group>"; };
+		DAD0C5FE19FD6034009CB08D /* icon_512x512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_512x512.png; sourceTree = "<group>"; };
+		DAD0C5FF19FD6034009CB08D /* icon_512x512@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_512x512@2x.png"; sourceTree = "<group>"; };
+		DAD0C60019FD6034009CB08D /* icon.sketch */ = {isa = PBXFileReference; lastKnownFileType = file; path = icon.sketch; sourceTree = "<group>"; };
+		DAD9B5E1176299B9001835F9 /* MasterPassword-Mac-LoginHelper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "MasterPassword-Mac-LoginHelper.xcodeproj"; path = "MasterPassword-Mac-LoginHelper/MasterPassword-Mac-LoginHelper.xcodeproj"; sourceTree = "<group>"; };
+		DAD9B5EF1762CAA4001835F9 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		DAEBC45214F6364500987BF6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DAF435FE22DA529E00889E85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		DAF4EF52190A828100023C90 /* Exo2.0-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2.0-Thin.otf"; sourceTree = "<group>"; };
+		DAF4EF53190A828100023C90 /* Exo2.0-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2.0-Regular.otf"; sourceTree = "<group>"; };
+		DAF4EF54190A828100023C90 /* Exo2.0-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2.0-ExtraBold.otf"; sourceTree = "<group>"; };
+		DAF4EF55190A828100023C90 /* Exo2.0-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Exo2.0-Bold.otf"; sourceTree = "<group>"; };
+		FAE566B2E28F8C1EBBD3DA25 /* Pods-Spectre-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spectre-macOS.release.xcconfig"; path = "Target Support Files/Pods-Spectre-macOS/Pods-Spectre-macOS.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA1C7AAE1F1A8F24009A3551 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA0B3F52229EEF730080C8C8 /* libcurses.tbd in Frameworks */,
+				DA0B3F50229EEEC00080C8C8 /* libsodium.a in Frameworks */,
+				DA0B3F4E229EEEB20080C8C8 /* libjson-c.a in Frameworks */,
+				DA1C7AB01F1A8F24009A3551 /* libxml2.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA1C7ACE1F1A8FD8009A3551 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA1C7AD01F1A8FD8009A3551 /* libxml2.tbd in Frameworks */,
+				DA69E97E23355852007482D5 /* libsodium.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA5BFA41147E415C00F98B1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAB7AE5B1F3D750B00C856B1 /* libjson-c.a in Frameworks */,
+				DA9261561BE1A89600369DE5 /* libz.tbd in Frameworks */,
+				DA9261541BE1A88900369DE5 /* libc++.tbd in Frameworks */,
+				DAADCC6A19FB00B500987B1D /* libKCOrderedAccessorFix.a in Frameworks */,
+				DA250925195148E200AC23F1 /* QuartzCore.framework in Frameworks */,
+				DAD9B5F01762CAA4001835F9 /* ServiceManagement.framework in Frameworks */,
+				DA16B341170661DB000A0EAB /* Carbon.framework in Frameworks */,
+				DA16B342170661E0000A0EAB /* Security.framework in Frameworks */,
+				DA16B345170661F2000A0EAB /* libPearl.a in Frameworks */,
+				DA16B344170661EE000A0EAB /* Cocoa.framework in Frameworks */,
+				1DF43F2BED86F22DD05C2D96 /* Pods_Spectre_macOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA6774381A474A03004F356A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA09745E1E99586600F0BFE8 /* libxml2.tbd in Frameworks */,
+				DA69E97D2335584C007482D5 /* libsodium.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAADCC4D19FB006500987B1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAC63269148680650075AEA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAC6326D148680650075AEA5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAC77CAA148291A600BCF976 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAADCC4B19FB000C00987B1D /* QuartzCore.framework in Frameworks */,
+				DA4DA1D91564471A00F6F596 /* libjrswizzle.a in Frameworks */,
+				DAC77CAE148291A600BCF976 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		102EC900388DE75AA1E3A7A3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				03F3309387AF61F6E0AA7FCC /* Pods-Spectre-macOS.debug.xcconfig */,
+				FAE566B2E28F8C1EBBD3DA25 /* Pods-Spectre-macOS.release.xcconfig */,
+				A1E434F9A1F32A8AE7083172 /* Pods-Spectre-macOS.test.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DA0CC53C1EB57B69009A8ED9 /* Fabric */ = {
+			isa = PBXGroup;
+			children = (
+				DA0CC53D1EB57B69009A8ED9 /* Fabric.plist */,
+			);
+			path = Fabric;
+			sourceTree = "<group>";
+		};
+		DA1C7AB71F1A8F6E009A3551 /* cli */ = {
+			isa = PBXGroup;
+			children = (
+				DA4571171F552C9500D54152 /* bcrypt.c */,
+				DA456CA21F5307B700D54152 /* blf.h */,
+				DA4571181F552C9500D54152 /* blowfish.c */,
+				DA1C7AB81F1A8F6E009A3551 /* mpw-bench.c */,
+				DAAF16631F5897EA0013B8AE /* mpw-cli-util.c */,
+				DAAF16641F5897EA0013B8AE /* mpw-cli-util.h */,
+				DA1C7AB91F1A8F6E009A3551 /* mpw-cli.c */,
+				DA1C7ABA1F1A8F6E009A3551 /* mpw-tests-util.c */,
+				DA1C7ABB1F1A8F6E009A3551 /* mpw-tests-util.h */,
+				DA1C7ABC1F1A8F6E009A3551 /* mpw-tests.c */,
+			);
+			name = cli;
+			path = ../../cli/src;
+			sourceTree = "<group>";
+		};
+		DA2508F819513C1400AC23F1 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA2508F919513C1400AC23F1 /* Foundation.framework */,
+				DA2508FA19513C1400AC23F1 /* CoreData.framework */,
+				DA2508FB19513C1400AC23F1 /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		DA5BFA39147E415C00F98B1E = {
+			isa = PBXGroup;
+			children = (
+				DA6773291A4746AF004F356A /* core */,
+				DA5E5C961724A667003798D8 /* Source */,
+				DACA23B41705DF7D002C6C22 /* Resources */,
+				DA5BFA47147E415C00F98B1E /* Frameworks */,
+				DA5BFA45147E415C00F98B1E /* Products */,
+				102EC900388DE75AA1E3A7A3 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		DA5BFA45147E415C00F98B1E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA5BFA44147E415C00F98B1E /* Spectre-macOS.app */,
+				DAC77CAD148291A600BCF976 /* libPearl.a */,
+				DAC6326C148680650075AEA5 /* libjrswizzle.a */,
+				DAADCC5019FB006500987B1D /* libKCOrderedAccessorFix.a */,
+				DA67743B1A474A03004F356A /* mpw-test */,
+				DA1C7AB61F1A8F24009A3551 /* mpw-cli */,
+				DA1C7AD61F1A8FD8009A3551 /* mpw-bench */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA5BFA47147E415C00F98B1E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA0B3F51229EEF730080C8C8 /* libcurses.tbd */,
+				DA0B3F4F229EEEC00080C8C8 /* libsodium.a */,
+				DAB7AE591F3D74E700C856B1 /* libjson-c.a */,
+				DA0B3F4C229EEE980080C8C8 /* libjson-c.a */,
+				DA09745D1E99586600F0BFE8 /* libxml2.tbd */,
+				DA6701B716406A4100B61001 /* Accounts.framework */,
+				DA16B340170661DB000A0EAB /* Carbon.framework */,
+				DA16B343170661EE000A0EAB /* Cocoa.framework */,
+				DA5BFA4E147E415C00F98B1E /* CoreData.framework */,
+				DA5BFA4C147E415C00F98B1E /* CoreGraphics.framework */,
+				DA5BFA4A147E415C00F98B1E /* Foundation.framework */,
+				DA9261531BE1A88900369DE5 /* libc++.tbd */,
+				DA9261551BE1A89600369DE5 /* libz.tbd */,
+				DA2508F819513C1400AC23F1 /* Other Frameworks */,
+				DAEBC45214F6364500987BF6 /* QuartzCore.framework */,
+				DAC632871486D95D0075AEA5 /* Security.framework */,
+				DAD9B5EF1762CAA4001835F9 /* ServiceManagement.framework */,
+				DA6701DD16406B7300B61001 /* Social.framework */,
+				DABB981515100B4000B05417 /* SystemConfiguration.framework */,
+				2DB307EF9666D244E34F13AC /* Pods_Spectre_macOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA5E5C961724A667003798D8 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				DA5E5CB21724A667003798D8 /* Mac */,
+				DA771FE51E6E15A1004D7EDE /* Prefix.pch */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		DA5E5CB21724A667003798D8 /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				DA5E5CC21724A667003798D8 /* InfoPlist.strings */,
+				DA5E5CC41724A667003798D8 /* MainMenu.xib */,
+				DAD9B5E1176299B9001835F9 /* MasterPassword-Mac-LoginHelper.xcodeproj */,
+				DA5E5CBF1724A667003798D8 /* MasterPassword.entitlements */,
+				DA0933C91747A56A00DE1CEF /* MPInitialWindow.xib */,
+				DA2508F019511D3600AC23F1 /* MPPasswordWindowController.xib */,
+			);
+			path = Mac;
+			sourceTree = "<group>";
+		};
+		DA6773291A4746AF004F356A /* core */ = {
+			isa = PBXGroup;
+			children = (
+				DAB07C9E1F7725D400CC6D43 /* aes.c */,
+				DAB07C9F1F7725D400CC6D43 /* aes.h */,
+				DA5B0B381F36467300B663F0 /* base64.c */,
+				DA5B0B391F36467300B663F0 /* base64.h */,
+				DA1C7AB71F1A8F6E009A3551 /* cli */,
+				DA831A271A6E1146000AC234 /* mpw-algorithm_v0.c */,
+				DA351483233EF8E800BCF504 /* mpw-algorithm_v0.h */,
+				DA831A281A6E1146000AC234 /* mpw-algorithm_v1.c */,
+				DA351485233EF8E800BCF504 /* mpw-algorithm_v1.h */,
+				DA831A291A6E1146000AC234 /* mpw-algorithm_v2.c */,
+				DA351484233EF8E800BCF504 /* mpw-algorithm_v2.h */,
+				DA831A2A1A6E1146000AC234 /* mpw-algorithm_v3.c */,
+				DA351482233EF8E800BCF504 /* mpw-algorithm_v3.h */,
+				DA6773BB1A4746AF004F356A /* mpw-algorithm.c */,
+				DA6773BC1A4746AF004F356A /* mpw-algorithm.h */,
+				DA7471A01F2B71A9005F3468 /* mpw-marshal-util.c */,
+				DA7471A11F2B71A9005F3468 /* mpw-marshal-util.h */,
+				DAA449D31EEC4B6B00E7BDD5 /* mpw-marshal.c */,
+				DAA449D41EEC4B6B00E7BDD5 /* mpw-marshal.h */,
+				DA6773C21A4746AF004F356A /* mpw-types.c */,
+				DA6773C31A4746AF004F356A /* mpw-types.h */,
+				DA6773C51A4746AF004F356A /* mpw-util.c */,
+				DA6773C61A4746AF004F356A /* mpw-util.h */,
+			);
+			name = core;
+			path = "../platform-independent/c/core/src";
+			sourceTree = "<group>";
+		};
+		DACA23B41705DF7D002C6C22 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DA0CC53C1EB57B69009A8ED9 /* Fabric */,
+				DA09745F1E995EB500F0BFE8 /* mpw_tests.xml */,
+				DACA29701705E1A8002C6C22 /* Data */,
+				DACA23B51705DF7D002C6C22 /* Media */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DACA23B51705DF7D002C6C22 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				DACA24311705DF7D002C6C22 /* Avatars */,
+				DAC793DF204CE79800EC597C /* cloud.png */,
+				DAC793DC204CE79800EC597C /* cloud@2x.png */,
+				DAC793DE204CE79800EC597C /* empty.png */,
+				DAC793E0204CE79800EC597C /* empty@2x.png */,
+				DACA268A1705DF81002C6C22 /* Fonts */,
+				DAC793DD204CE79800EC597C /* identity.png */,
+				DAC793E6204CE79900EC597C /* identity@2x.png */,
+				DA6558A319A99609009A0BEB /* Images.xcassets */,
+				DAC793E7204CE79900EC597C /* lock.png */,
+				DAC793E2204CE79800EC597C /* lock@2x.png */,
+				DACA241C1705DF7D002C6C22 /* logo-bare.png */,
+				DAD0C5F419FD6034009CB08D /* mac */,
+				DACA24581705DF7D002C6C22 /* menu-icon.png */,
+				DAC793E4204CE79800EC597C /* menu-icon@2x.png */,
+				DAC793E8204CE79900EC597C /* play.png */,
+				DAC793E3204CE79800EC597C /* play@2x.png */,
+				DA0933CB1747AD2D00DE1CEF /* shot-laptop-leaning-iphone.png */,
+				DAC793E5204CE79900EC597C /* unlocked.png */,
+				DAC793E1204CE79800EC597C /* unlocked@2x.png */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
+		DACA24311705DF7D002C6C22 /* Avatars */ = {
+			isa = PBXGroup;
+			children = (
+				DACA24351705DF7D002C6C22 /* avatar-0.png */,
+				DACA24561705DF7D002C6C22 /* avatar-0@2x.png */,
+				DACA24421705DF7D002C6C22 /* avatar-1.png */,
+				DACA24391705DF7D002C6C22 /* avatar-1@2x.png */,
+				DACA244B1705DF7D002C6C22 /* avatar-2.png */,
+				DACA24541705DF7D002C6C22 /* avatar-2@2x.png */,
+				DACA244F1705DF7D002C6C22 /* avatar-3.png */,
+				DACA24331705DF7D002C6C22 /* avatar-3@2x.png */,
+				DACA24511705DF7D002C6C22 /* avatar-4.png */,
+				DACA244D1705DF7D002C6C22 /* avatar-4@2x.png */,
+				DACA244A1705DF7D002C6C22 /* avatar-5.png */,
+				DACA24441705DF7D002C6C22 /* avatar-5@2x.png */,
+				DACA24451705DF7D002C6C22 /* avatar-6.png */,
+				DACA24461705DF7D002C6C22 /* avatar-6@2x.png */,
+				DACA24341705DF7D002C6C22 /* avatar-7.png */,
+				DACA243B1705DF7D002C6C22 /* avatar-7@2x.png */,
+				DACA243F1705DF7D002C6C22 /* avatar-8.png */,
+				DACA24411705DF7D002C6C22 /* avatar-8@2x.png */,
+				DACA24381705DF7D002C6C22 /* avatar-9.png */,
+				DACA244E1705DF7D002C6C22 /* avatar-9@2x.png */,
+				DACA24481705DF7D002C6C22 /* avatar-10.png */,
+				DACA24571705DF7D002C6C22 /* avatar-10@2x.png */,
+				DACA24551705DF7D002C6C22 /* avatar-11.png */,
+				DACA243A1705DF7D002C6C22 /* avatar-11@2x.png */,
+				DACA24361705DF7D002C6C22 /* avatar-12.png */,
+				DACA24531705DF7D002C6C22 /* avatar-12@2x.png */,
+				DACA24401705DF7D002C6C22 /* avatar-13.png */,
+				DACA24321705DF7D002C6C22 /* avatar-13@2x.png */,
+				DACA243D1705DF7D002C6C22 /* avatar-14.png */,
+				DACA244C1705DF7D002C6C22 /* avatar-14@2x.png */,
+				DACA24371705DF7D002C6C22 /* avatar-15.png */,
+				DACA24431705DF7D002C6C22 /* avatar-15@2x.png */,
+				DACA24521705DF7D002C6C22 /* avatar-16.png */,
+				DACA24471705DF7D002C6C22 /* avatar-16@2x.png */,
+				DACA24491705DF7D002C6C22 /* avatar-17.png */,
+				DACA243C1705DF7D002C6C22 /* avatar-17@2x.png */,
+				DACA24501705DF7D002C6C22 /* avatar-18.png */,
+				DACA243E1705DF7D002C6C22 /* avatar-18@2x.png */,
+				DAC793F6204CE7A200EC597C /* avatar-add.png */,
+				DAC793F7204CE7A200EC597C /* avatar-add@2x.png */,
+			);
+			path = Avatars;
+			sourceTree = "<group>";
+		};
+		DACA268A1705DF81002C6C22 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				DAF4EF55190A828100023C90 /* Exo2.0-Bold.otf */,
+				DAF4EF54190A828100023C90 /* Exo2.0-ExtraBold.otf */,
+				DAF4EF53190A828100023C90 /* Exo2.0-Regular.otf */,
+				DAF4EF52190A828100023C90 /* Exo2.0-Thin.otf */,
+				DACA268F1705DF81002C6C22 /* SourceCodePro-Black.otf */,
+				DACA268E1705DF81002C6C22 /* SourceCodePro-ExtraLight.otf */,
+				DA3BCFCC19BD09E0006B2681 /* SourceCodePro-Regular.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		DACA29701705E1A8002C6C22 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				DACA29721705E1A8002C6C22 /* dictionary.lst */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		DAD0C5F419FD6034009CB08D /* mac */ = {
+			isa = PBXGroup;
+			children = (
+				DAD0C5F519FD6034009CB08D /* icon */,
+				DAD0C60019FD6034009CB08D /* icon.sketch */,
+			);
+			path = mac;
+			sourceTree = "<group>";
+		};
+		DAD0C5F519FD6034009CB08D /* icon */ = {
+			isa = PBXGroup;
+			children = (
+				DAD0C5F819FD6034009CB08D /* icon_16x16.png */,
+				DAD0C5F919FD6034009CB08D /* icon_16x16@2x.png */,
+				DAD0C5FC19FD6034009CB08D /* icon_32x32.png */,
+				DAD0C5FD19FD6034009CB08D /* icon_32x32@2x.png */,
+				DAD0C5F619FD6034009CB08D /* icon_128x128.png */,
+				DAD0C5F719FD6034009CB08D /* icon_128x128@2x.png */,
+				DAD0C5FA19FD6034009CB08D /* icon_256x256.png */,
+				DAD0C5FB19FD6034009CB08D /* icon_256x256@2x.png */,
+				DAD0C5FE19FD6034009CB08D /* icon_512x512.png */,
+				DAD0C5FF19FD6034009CB08D /* icon_512x512@2x.png */,
+			);
+			path = icon;
+			sourceTree = "<group>";
+		};
+		DAD9B5E2176299B9001835F9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DAD9B5E6176299BA001835F9 /* MasterPassword-Mac-LoginHelper.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		DAC6326A148680650075AEA5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAC77CAB148291A600BCF976 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXLegacyTarget section */
+		DA5B0B611F3D416500B663F0 /* libsodium-macos */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = DA5B0B621F3D416500B663F0 /* Build configuration list for PBXLegacyTarget "libsodium-macos" */;
+			buildPhases = (
+			);
+			buildToolPath = "../lib/bin/build_libsodium-macos";
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = "libsodium-macos";
+			passBuildSettingsInEnvironment = 1;
+			productName = "libsodium-osx";
+		};
+		DAB7AE421F3D466D00C856B1 /* libjson-c-macos */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = DAB7AE431F3D466D00C856B1 /* Build configuration list for PBXLegacyTarget "libjson-c-macos" */;
+			buildPhases = (
+			);
+			buildToolPath = "../lib/bin/build_libjson-c-macos";
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = "libjson-c-macos";
+			passBuildSettingsInEnvironment = 1;
+			productName = "libjson-c";
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		DA1C7AA61F1A8F24009A3551 /* mpw-cli */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA1C7AB21F1A8F24009A3551 /* Build configuration list for PBXNativeTarget "mpw-cli" */;
+			buildPhases = (
+				DA1C7AA71F1A8F24009A3551 /* Sources */,
+				DA1C7AAE1F1A8F24009A3551 /* Frameworks */,
+				DA1C7AB11F1A8F24009A3551 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAB7AE581F3D64A600C856B1 /* PBXTargetDependency */,
+				DAB7AE3B1F3D424700C856B1 /* PBXTargetDependency */,
+			);
+			name = "mpw-cli";
+			productName = "mpw-test";
+			productReference = DA1C7AB61F1A8F24009A3551 /* mpw-cli */;
+			productType = "com.apple.product-type.tool";
+		};
+		DA1C7AC61F1A8FD8009A3551 /* mpw-bench */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA1C7AD21F1A8FD8009A3551 /* Build configuration list for PBXNativeTarget "mpw-bench" */;
+			buildPhases = (
+				DA1C7AC71F1A8FD8009A3551 /* Sources */,
+				DA1C7ACE1F1A8FD8009A3551 /* Frameworks */,
+				DA1C7AD11F1A8FD8009A3551 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAB7AE391F3D424200C856B1 /* PBXTargetDependency */,
+			);
+			name = "mpw-bench";
+			productName = "mpw-test";
+			productReference = DA1C7AD61F1A8FD8009A3551 /* mpw-bench */;
+			productType = "com.apple.product-type.tool";
+		};
+		DA5BFA43147E415C00F98B1E /* Spectre-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA5BFA6D147E415C00F98B1E /* Build configuration list for PBXNativeTarget "Spectre-macOS" */;
+			buildPhases = (
+				9CD7720E4754CFBE02ADFC76 /* [CP] Check Pods Manifest.lock */,
+				DA4EF9CB19FD4B600032ECB5 /* Run Script: genassets */,
+				DA5BFA40147E415C00F98B1E /* Sources */,
+				DA5BFA41147E415C00F98B1E /* Frameworks */,
+				DA5BFA42147E415C00F98B1E /* Resources */,
+				DAD9B5EE1762CA3A001835F9 /* Copy LoginHelper */,
+				DA6556E314D55F3000841C99 /* Run Script: GIT version -> Info.plist */,
+				DAD3125D155288AA00A3F9ED /* Run Script: Fabric */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAB7AE521F3D649400C856B1 /* PBXTargetDependency */,
+				DAB7AE351F3D423600C856B1 /* PBXTargetDependency */,
+				DABFA072176E3FDF00E83589 /* PBXTargetDependency */,
+			);
+			name = "Spectre-macOS";
+			productName = MasterPassword;
+			productReference = DA5BFA44147E415C00F98B1E /* Spectre-macOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DA67743A1A474A03004F356A /* mpw-test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA67743F1A474A03004F356A /* Build configuration list for PBXNativeTarget "mpw-test" */;
+			buildPhases = (
+				DA6774371A474A03004F356A /* Sources */,
+				DA6774381A474A03004F356A /* Frameworks */,
+				DA6774391A474A03004F356A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAB7AE371F3D423D00C856B1 /* PBXTargetDependency */,
+			);
+			name = "mpw-test";
+			productName = "mpw-test";
+			productReference = DA67743B1A474A03004F356A /* mpw-test */;
+			productType = "com.apple.product-type.tool";
+		};
+		DAADCC4F19FB006500987B1D /* KCOrderedAccessorFix */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAADCC5E19FB006500987B1D /* Build configuration list for PBXNativeTarget "KCOrderedAccessorFix" */;
+			buildPhases = (
+				DAADCC4C19FB006500987B1D /* Sources */,
+				DAADCC4D19FB006500987B1D /* Frameworks */,
+				DAADCC4E19FB006500987B1D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KCOrderedAccessorFix;
+			productName = KCOrderedAccessorFix;
+			productReference = DAADCC5019FB006500987B1D /* libKCOrderedAccessorFix.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		DAC6326B148680650075AEA5 /* jrswizzle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAC63274148680650075AEA5 /* Build configuration list for PBXNativeTarget "jrswizzle" */;
+			buildPhases = (
+				DAC63268148680650075AEA5 /* Sources */,
+				DAC63269148680650075AEA5 /* Frameworks */,
+				DAC6326A148680650075AEA5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = jrswizzle;
+			productName = jrswizzle;
+			productReference = DAC6326C148680650075AEA5 /* libjrswizzle.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		DAC77CAC148291A600BCF976 /* Pearl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAC77CB7148291A600BCF976 /* Build configuration list for PBXNativeTarget "Pearl" */;
+			buildPhases = (
+				DAC77CAB148291A600BCF976 /* Headers */,
+				DAC77CA9148291A600BCF976 /* Sources */,
+				DAC77CAA148291A600BCF976 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAC63286148681200075AEA5 /* PBXTargetDependency */,
+			);
+			name = Pearl;
+			productName = Pearl;
+			productReference = DAC77CAD148291A600BCF976 /* libPearl.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA5BFA3B147E415C00F98B1E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MP;
+				LastSwiftUpdateCheck = 0720;
+				LastTestingUpgradeCheck = 0510;
+				LastUpgradeCheck = 1200;
+				ORGANIZATIONNAME = Lyndir;
+				TargetAttributes = {
+					DA1C7AA61F1A8F24009A3551 = {
+						DevelopmentTeam = HL3Q45LX9N;
+					};
+					DA1C7AC61F1A8FD8009A3551 = {
+						DevelopmentTeam = HL3Q45LX9N;
+					};
+					DA5B0B611F3D416500B663F0 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = HL3Q45LX9N;
+						ProvisioningStyle = Automatic;
+					};
+					DA5BFA43147E415C00F98B1E = {
+						DevelopmentTeam = HL3Q45LX9N;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
+					};
+					DA67743A1A474A03004F356A = {
+						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = HL3Q45LX9N;
+					};
+					DAADCC4F19FB006500987B1D = {
+						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = HL3Q45LX9N;
+					};
+					DAB7AE421F3D466D00C856B1 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = HL3Q45LX9N;
+						ProvisioningStyle = Automatic;
+					};
+					DAC6326B148680650075AEA5 = {
+						DevelopmentTeam = HL3Q45LX9N;
+					};
+					DAC77CAC148291A600BCF976 = {
+						DevelopmentTeam = HL3Q45LX9N;
+					};
+				};
+			};
+			buildConfigurationList = DA5BFA3E147E415C00F98B1E /* Build configuration list for PBXProject "Spectre-macOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				nl,
+				Base,
+			);
+			mainGroup = DA5BFA39147E415C00F98B1E;
+			productRefGroup = DA5BFA45147E415C00F98B1E /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = DAD9B5E2176299B9001835F9 /* Products */;
+					ProjectRef = DAD9B5E1176299B9001835F9 /* MasterPassword-Mac-LoginHelper.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				DA5BFA43147E415C00F98B1E /* Spectre-macOS */,
+				DAC77CAC148291A600BCF976 /* Pearl */,
+				DAC6326B148680650075AEA5 /* jrswizzle */,
+				DAADCC4F19FB006500987B1D /* KCOrderedAccessorFix */,
+				DA67743A1A474A03004F356A /* mpw-test */,
+				DA1C7AC61F1A8FD8009A3551 /* mpw-bench */,
+				DA1C7AA61F1A8F24009A3551 /* mpw-cli */,
+				DA5B0B611F3D416500B663F0 /* libsodium-macos */,
+				DAB7AE421F3D466D00C856B1 /* libjson-c-macos */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		DAD9B5E6176299BA001835F9 /* MasterPassword-Mac-LoginHelper.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "MasterPassword-Mac-LoginHelper.app";
+			remoteRef = DAD9B5E5176299BA001835F9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA5BFA42147E415C00F98B1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DACA26FE1705DF81002C6C22 /* logo-bare.png in Resources */,
+				DACA27121705DF81002C6C22 /* avatar-13@2x.png in Resources */,
+				DACA27131705DF81002C6C22 /* avatar-3@2x.png in Resources */,
+				DACA27141705DF81002C6C22 /* avatar-7.png in Resources */,
+				DAF4EF57190A828100023C90 /* Exo2.0-Regular.otf in Resources */,
+				DACA27151705DF81002C6C22 /* avatar-0.png in Resources */,
+				DA6558A419A99609009A0BEB /* Images.xcassets in Resources */,
+				DACA27161705DF81002C6C22 /* avatar-12.png in Resources */,
+				DACA27171705DF81002C6C22 /* avatar-15.png in Resources */,
+				DAF4EF59190A828100023C90 /* Exo2.0-Bold.otf in Resources */,
+				DAC793EA204CE79900EC597C /* identity.png in Resources */,
+				DACA27181705DF81002C6C22 /* avatar-9.png in Resources */,
+				DACA27191705DF81002C6C22 /* avatar-1@2x.png in Resources */,
+				DA2508F119511D3600AC23F1 /* MPPasswordWindowController.xib in Resources */,
+				DACA271A1705DF81002C6C22 /* avatar-11@2x.png in Resources */,
+				DACA271B1705DF81002C6C22 /* avatar-7@2x.png in Resources */,
+				DAC793EC204CE79900EC597C /* cloud.png in Resources */,
+				DAC793F4204CE79900EC597C /* lock.png in Resources */,
+				DACA271C1705DF81002C6C22 /* avatar-17@2x.png in Resources */,
+				DACA271D1705DF81002C6C22 /* avatar-14.png in Resources */,
+				DACA271E1705DF81002C6C22 /* avatar-18@2x.png in Resources */,
+				DACA271F1705DF81002C6C22 /* avatar-8.png in Resources */,
+				DACA27201705DF81002C6C22 /* avatar-13.png in Resources */,
+				DACA27211705DF81002C6C22 /* avatar-8@2x.png in Resources */,
+				DACA27221705DF81002C6C22 /* avatar-1.png in Resources */,
+				DACA27231705DF81002C6C22 /* avatar-15@2x.png in Resources */,
+				DAC793E9204CE79900EC597C /* cloud@2x.png in Resources */,
+				DACA27241705DF81002C6C22 /* avatar-5@2x.png in Resources */,
+				DACA27251705DF81002C6C22 /* avatar-6.png in Resources */,
+				DAC793F8204CE7A300EC597C /* avatar-add.png in Resources */,
+				DAEB942E18B47FB3000490CC /* MPInitialWindow.xib in Resources */,
+				DACA27261705DF81002C6C22 /* avatar-6@2x.png in Resources */,
+				DAC793EB204CE79900EC597C /* empty.png in Resources */,
+				DACA27271705DF81002C6C22 /* avatar-16@2x.png in Resources */,
+				DACA27281705DF81002C6C22 /* avatar-10.png in Resources */,
+				DACA27291705DF81002C6C22 /* avatar-17.png in Resources */,
+				DACA272A1705DF81002C6C22 /* avatar-5.png in Resources */,
+				DAC793F2204CE79900EC597C /* unlocked.png in Resources */,
+				DAC793ED204CE79900EC597C /* empty@2x.png in Resources */,
+				DACA272B1705DF81002C6C22 /* avatar-2.png in Resources */,
+				DACA272C1705DF81002C6C22 /* avatar-14@2x.png in Resources */,
+				DAC793F1204CE79900EC597C /* menu-icon@2x.png in Resources */,
+				DAC793EE204CE79900EC597C /* unlocked@2x.png in Resources */,
+				DACA272D1705DF81002C6C22 /* avatar-4@2x.png in Resources */,
+				DACA272E1705DF81002C6C22 /* avatar-9@2x.png in Resources */,
+				DACA272F1705DF81002C6C22 /* avatar-3.png in Resources */,
+				DAC793EF204CE79900EC597C /* lock@2x.png in Resources */,
+				DACA27301705DF81002C6C22 /* avatar-18.png in Resources */,
+				DACA27311705DF81002C6C22 /* avatar-4.png in Resources */,
+				DAC793F9204CE7A300EC597C /* avatar-add@2x.png in Resources */,
+				DAF4EF58190A828100023C90 /* Exo2.0-ExtraBold.otf in Resources */,
+				DA3BCFCD19BD09E0006B2681 /* SourceCodePro-Regular.otf in Resources */,
+				DAF4EF56190A828100023C90 /* Exo2.0-Thin.otf in Resources */,
+				DACA27321705DF81002C6C22 /* avatar-16.png in Resources */,
+				DACA27331705DF81002C6C22 /* avatar-12@2x.png in Resources */,
+				DACA27341705DF81002C6C22 /* avatar-2@2x.png in Resources */,
+				DAC793F0204CE79900EC597C /* play@2x.png in Resources */,
+				DA0CC53E1EB57B69009A8ED9 /* Fabric.plist in Resources */,
+				DACA27351705DF81002C6C22 /* avatar-11.png in Resources */,
+				DACA27361705DF81002C6C22 /* avatar-0@2x.png in Resources */,
+				DACA27371705DF81002C6C22 /* avatar-10@2x.png in Resources */,
+				DACA27381705DF81002C6C22 /* menu-icon.png in Resources */,
+				DACA29671705DF81002C6C22 /* SourceCodePro-ExtraLight.otf in Resources */,
+				DACA29681705DF81002C6C22 /* SourceCodePro-Black.otf in Resources */,
+				DAC793F3204CE79900EC597C /* identity@2x.png in Resources */,
+				DACA29741705E1A8002C6C22 /* dictionary.lst in Resources */,
+				DA5E5D081724A667003798D8 /* MasterPassword.entitlements in Resources */,
+				DA5E5D0A1724A667003798D8 /* InfoPlist.strings in Resources */,
+				DA5E5D0B1724A667003798D8 /* MainMenu.xib in Resources */,
+				DA0933CC1747AD2D00DE1CEF /* shot-laptop-leaning-iphone.png in Resources */,
+				DAC793F5204CE79900EC597C /* play.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9CD7720E4754CFBE02ADFC76 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Spectre-macOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA4EF9CB19FD4B600032ECB5 /* Run Script: genassets */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script: genassets";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/bin/sh -e";
+			shellScript = "exec Scripts/genassets";
+			showEnvVarsInLog = 0;
+		};
+		DA6556E314D55F3000841C99 /* Run Script: GIT version -> Info.plist */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script: GIT version -> Info.plist";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/bin/sh -e";
+			shellScript = "exec Scripts/updatePlist\n";
+		};
+		DAD3125D155288AA00A3F9ED /* Run Script: Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script: Fabric";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/bin/sh -e";
+			shellScript = "[[ $DEPLOYMENT_LOCATION != YES ]] && exit\n\napiKey=$(/usr/libexec/PlistBuddy -c \"Print :'API Key'\" Resources/Fabric/Fabric.plist)\n[[ $apiKey ]] && External/Mac/Fabric.framework/run \"$apiKey\" \n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA1C7AA71F1A8F24009A3551 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA1C7AAA1F1A8F24009A3551 /* mpw-marshal.c in Sources */,
+				DA1C7AAB1F1A8F24009A3551 /* mpw-types.c in Sources */,
+				DA5B0B3D1F36467900B663F0 /* base64.c in Sources */,
+				DA351493233EF94300BCF504 /* mpw-algorithm_v1.c in Sources */,
+				DAB07CA31F77261400CC6D43 /* aes.c in Sources */,
+				DAAF16661F5CA3240013B8AE /* mpw-cli-util.c in Sources */,
+				DA1C7AAC1F1A8F24009A3551 /* mpw-util.c in Sources */,
+				DA351495233EF94300BCF504 /* mpw-algorithm_v3.c in Sources */,
+				DA351492233EF94300BCF504 /* mpw-algorithm_v0.c in Sources */,
+				DA1C7AC31F1A8FBA009A3551 /* mpw-cli.c in Sources */,
+				DA7471A31F2B71AE005F3468 /* mpw-marshal-util.c in Sources */,
+				DA351494233EF94300BCF504 /* mpw-algorithm_v2.c in Sources */,
+				DA1C7AAD1F1A8F24009A3551 /* mpw-algorithm.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA1C7AC71F1A8FD8009A3551 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA5B0B3C1F36467900B663F0 /* base64.c in Sources */,
+				DA351499233EF94300BCF504 /* mpw-algorithm_v3.c in Sources */,
+				DA351497233EF94300BCF504 /* mpw-algorithm_v1.c in Sources */,
+				DA351496233EF94300BCF504 /* mpw-algorithm_v0.c in Sources */,
+				DA1C7ACA1F1A8FD8009A3551 /* mpw-types.c in Sources */,
+				DA1C7ACB1F1A8FD8009A3551 /* mpw-util.c in Sources */,
+				DAB07CA61F77262400CC6D43 /* aes.c in Sources */,
+				DA1C7AD71F1A8FE6009A3551 /* mpw-bench.c in Sources */,
+				DA351498233EF94300BCF504 /* mpw-algorithm_v2.c in Sources */,
+				DA1C7ACD1F1A8FD8009A3551 /* mpw-algorithm.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA5BFA40147E415C00F98B1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAA449D51EEC4B6B00E7BDD5 /* mpw-marshal.c in Sources */,
+				DA351491233EF93E00BCF504 /* mpw-algorithm_v3.c in Sources */,
+				DAB07CA01F7725D400CC6D43 /* aes.c in Sources */,
+				DA6774311A4746AF004F356A /* mpw-util.c in Sources */,
+				DA351490233EF93E00BCF504 /* mpw-algorithm_v2.c in Sources */,
+				DA5B0B3A1F36467300B663F0 /* base64.c in Sources */,
+				DA35148E233EF93E00BCF504 /* mpw-algorithm_v0.c in Sources */,
+				DA35148F233EF93E00BCF504 /* mpw-algorithm_v1.c in Sources */,
+				DA67742F1A4746AF004F356A /* mpw-types.c in Sources */,
+				DA6774291A4746AF004F356A /* mpw-algorithm.c in Sources */,
+				DA7471A61F2B71B9005F3468 /* mpw-marshal-util.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA6774371A474A03004F356A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA35149A233EF94500BCF504 /* mpw-algorithm_v0.c in Sources */,
+				DA1C7AD81F1A8FF4009A3551 /* mpw-tests-util.c in Sources */,
+				DA35149B233EF94500BCF504 /* mpw-algorithm_v1.c in Sources */,
+				DA6774451A474A3B004F356A /* mpw-types.c in Sources */,
+				DAB07CA51F77261C00CC6D43 /* aes.c in Sources */,
+				DA6774461A474A3B004F356A /* mpw-util.c in Sources */,
+				DA35149C233EF94500BCF504 /* mpw-algorithm_v2.c in Sources */,
+				DA1C7AD91F1A8FF4009A3551 /* mpw-tests.c in Sources */,
+				DA5B0B3B1F36467800B663F0 /* base64.c in Sources */,
+				DA6774431A474A3B004F356A /* mpw-algorithm.c in Sources */,
+				DA35149D233EF94500BCF504 /* mpw-algorithm_v3.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAADCC4C19FB006500987B1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAC63268148680650075AEA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAC77CA9148291A600BCF976 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DAB7AE351F3D423600C856B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA5B0B611F3D416500B663F0 /* libsodium-macos */;
+			targetProxy = DAB7AE341F3D423600C856B1 /* PBXContainerItemProxy */;
+		};
+		DAB7AE371F3D423D00C856B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA5B0B611F3D416500B663F0 /* libsodium-macos */;
+			targetProxy = DAB7AE361F3D423D00C856B1 /* PBXContainerItemProxy */;
+		};
+		DAB7AE391F3D424200C856B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA5B0B611F3D416500B663F0 /* libsodium-macos */;
+			targetProxy = DAB7AE381F3D424200C856B1 /* PBXContainerItemProxy */;
+		};
+		DAB7AE3B1F3D424700C856B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA5B0B611F3D416500B663F0 /* libsodium-macos */;
+			targetProxy = DAB7AE3A1F3D424700C856B1 /* PBXContainerItemProxy */;
+		};
+		DAB7AE521F3D649400C856B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAB7AE421F3D466D00C856B1 /* libjson-c-macos */;
+			targetProxy = DAB7AE511F3D649400C856B1 /* PBXContainerItemProxy */;
+		};
+		DAB7AE581F3D64A600C856B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAB7AE421F3D466D00C856B1 /* libjson-c-macos */;
+			targetProxy = DAB7AE571F3D64A600C856B1 /* PBXContainerItemProxy */;
+		};
+		DABFA072176E3FDF00E83589 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "MasterPassword-Mac-LoginHelper";
+			targetProxy = DABFA071176E3FDF00E83589 /* PBXContainerItemProxy */;
+		};
+		DAC63286148681200075AEA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAC6326B148680650075AEA5 /* jrswizzle */;
+			targetProxy = DAC63285148681200075AEA5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DA5E5CC21724A667003798D8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA5E5CC31724A667003798D8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DA5E5CC41724A667003798D8 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAF435FE22DA529E00889E85 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DA0974431E956FA600F0BFE8 /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
+				CLANG_STATIC_ANALYZER_MODE = deep;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_CXX0X_EXTENSIONS = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = NO;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = YES;
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_RECEIVER_WEAK = NO;
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = NO;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CLANG_WARN__EXIT_TIME_DESTRUCTORS = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = HL3Q45LX9N;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"NDEBUG=1",
+					"NS_BLOCK_ASSERTIONS=1",
+					"CRASHLYTICS=1",
+					PEARL,
+					PEARL_COCOA,
+					PEARL_CRYPTO,
+				);
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_SIGN_COMPARE = NO;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LD_DYLIB_INSTALL_NAME = "@rpath/$(EXECUTABLE_PATH)";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PUBLIC_HEADERS_FOLDER_PATH = include;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Test;
+		};
+		DA0974441E956FA600F0BFE8 /* Test */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1E434F9A1F32A8AE7083172 /* Pods-Spectre-macOS.test.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = Source/Mac/MasterPassword.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/External/Mac\"",
+				);
+				GCC_PREFIX_HEADER = "Source/MasterPassword-Prefix.pch";
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(PROJECT_DIR)/../lib/libsodium/build-macos~/out/include\"",
+					"\"$(PROJECT_DIR)/../lib/libjson-c/build-macos~/out/include\"",
+				);
+				INFOPLIST_FILE = "Source/Mac/MasterPassword-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(PROJECT_DIR)/../lib/libsodium/build-macos~/out/lib\"",
+					"\"$(PROJECT_DIR)/../lib/libjson-c/build-macos~/out/lib\"",
+				);
+				OTHER_CFLAGS = (
+					"-DMPW_SODIUM=1",
+					"-DMPW_CPERCIVA=0",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.spectre.macOS;
+				PRODUCT_NAME = "Spectre-macOS";
+				SKIP_INSTALL = NO;
+			};
+			name = Test;
+		};
+		DA0974451E956FA600F0BFE8 /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_PREFIX_HEADER = "External/Pearl/Pearl-Prefix.pch";
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/External/Pearl/Pearl-Crypto/lib\"",
+					"$(inherited)",
+				);
+			};
+			name = Test;
+		};
+		DA0974461E956FA600F0BFE8 /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DSTROOT = /tmp/jrswizzle.dst;
+				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Test;
+		};
+		DA0974471E956FA600F0BFE8 /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+			};
+			name = Test;
+		};
+		DA0974481E956FA600F0BFE8 /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CODE_SIGN_IDENTITY = "-";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(PROJECT_DIR)/../lib/libsodium/build-macos~/out/include\"",
+					"\"$(PROJECT_DIR)/../lib/libjson-c/build-macos~/out/include\"",
+					/usr/include/libxml2,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(PROJECT_DIR)/../lib/libsodium/build-macos~/out/lib\"",
+					"\"$(PROJECT_DIR)/../lib/libjson-c/build-macos~/out/lib\"",
+				);
+				OTHER_CFLAGS = (
+					"-DMPW_SODIUM=1",
+					"-DMPW_CPERCIVA=0",
+				);
+			};
+			name = Test;
+		};
+		DA1C7AB31F1A8F24009A3551 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CODE_SIGN_IDENTITY = "-";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"MPW_SODIUM=1",
+					"MPW_CPERCIVA=0",
+					"MPW_JSON=1",
+					"MPW_COLOR=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(PROJECT_DIR)/../lib/libsodium/build-macos~/out/include\"",
+					"\"$(PROJECT_DIR)/../lib/libjson-c/build-macos~/out/include\"",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(PROJECT_DIR)/../lib/libsodium/build-macos~/out/lib\"",
+					"\"$(PROJECT_DIR)/../lib/libjson-c/build-macos~/out/lib\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DA1C7AB41F1A8F24009A3551 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CODE_SIGN_IDENTITY = "-";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"MPW_SODIUM=1",
+					"MPW_CPERCIVA=0",
+					"MPW_JSON=1",
+					"MPW_COLOR=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(PROJECT_DIR)/../lib/libsodium/build-macos~/out/include\"",
+					"\"$(PROJECT_DIR)/../lib/libjson-c/build-macos~/out/include\"",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(PROJECT_DIR)/../lib/libsodium/build-macos~/out/lib\"",
+					"\"$(PROJECT_DIR)/../lib/libjson-c/build-macos~/out/lib\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DA1C7AB51F1A8F24009A3551 /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CODE_SIGN_IDENTITY = "-";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"MPW_SODIUM=1",
+					"MPW_CPERCIVA=0",
+					"MPW_JSON=1",
+					"MPW_COLOR=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(PROJECT_DIR)/../lib/libsodium/build-macos~/out/include\"",
+					"\"$(PROJECT_DIR)/../lib/libjson-c/build-macos~/out/include\"",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(PROJECT_DIR)/../lib/libsodium/build-macos~/out/lib\"",
+					"\"$(PROJECT_DIR)/../lib/libjson-c/build-macos~/out/lib\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Test;
+		};
+		DA1C7AD31F1A8FD8009A3551 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CODE_SIGN_IDENTITY = "-";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(PROJECT_DIR)/../lib/libsodium/build-macos~/out/include\"",
+					"\"$(PROJECT_DIR)/../lib/libjson-c/build-macos~/out/include\"",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(PROJECT_DIR)/../lib/libsodium/build-macos~/out/lib\"",
+					"\"$(PROJECT_DIR)/../lib/libjson-c/build-macos~/out/lib\"",
+				);
+				OTHER_CFLAGS = (
+					"-DMPW_SODIUM=1",
+					"-DMPW_CPERCIVA=0",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DA1C7AD41F1A8FD8009A3551 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CODE_SIGN_IDENTITY = "-";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(PROJECT_DIR)/../lib/libsodium/build-macos~/out/include\"",
+					"\"$(PROJECT_DIR)/../lib/libjson-c/build-macos~/out/include\"",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(PROJECT_DIR)/../lib/libsodium/build-macos~/out/lib\"",
+					"\"$(PROJECT_DIR)/../lib/libjson-c/build-macos~/out/lib\"",
+				);
+				OTHER_CFLAGS = (
+					"-DMPW_SODIUM=1",
+					"-DMPW_CPERCIVA=0",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DA1C7AD51F1A8FD8009A3551 /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CODE_SIGN_IDENTITY = "-";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(PROJECT_DIR)/../lib/libsodium/build-macos~/out/include\"",
+					"\"$(PROJECT_DIR)/../lib/libjson-c/build-macos~/out/include\"",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(PROJECT_DIR)/../lib/libsodium/build-macos~/out/lib\"",
+					"\"$(PROJECT_DIR)/../lib/libjson-c/build-macos~/out/lib\"",
+				);
+				OTHER_CFLAGS = (
+					"-DMPW_SODIUM=1",
+					"-DMPW_CPERCIVA=0",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Test;
+		};
+		DA5B0B631F3D416500B663F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DA5B0B641F3D416500B663F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DA5B0B651F3D416500B663F0 /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Test;
+		};
+		DA5BFA6B147E415C00F98B1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_CXX0X_EXTENSIONS = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = NO;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = YES;
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_RECEIVER_WEAK = NO;
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = NO;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CLANG_WARN__EXIT_TIME_DESTRUCTORS = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = HL3Q45LX9N;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"CRASHLYTICS=1",
+					PEARL,
+					PEARL_COCOA,
+					PEARL_CRYPTO,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_SIGN_COMPARE = NO;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LD_DYLIB_INSTALL_NAME = "@rpath/$(EXECUTABLE_PATH)";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PUBLIC_HEADERS_FOLDER_PATH = include;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DA5BFA6C147E415C00F98B1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND = YES;
+				CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY = YES;
+				CLANG_STATIC_ANALYZER_MODE = deep;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_CXX0X_EXTENSIONS = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = NO;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = YES;
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_RECEIVER_WEAK = NO;
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = NO;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CLANG_WARN__EXIT_TIME_DESTRUCTORS = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = HL3Q45LX9N;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"NDEBUG=1",
+					"NS_BLOCK_ASSERTIONS=1",
+					"CRASHLYTICS=1",
+					PEARL,
+					PEARL_COCOA,
+					PEARL_CRYPTO,
+				);
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_FOUR_CHARACTER_CONSTANTS = YES;
+				GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				GCC_WARN_SIGN_COMPARE = NO;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNKNOWN_PRAGMAS = NO;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LD_DYLIB_INSTALL_NAME = "@rpath/$(EXECUTABLE_PATH)";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PUBLIC_HEADERS_FOLDER_PATH = include;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DA5BFA6E147E415C00F98B1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03F3309387AF61F6E0AA7FCC /* Pods-Spectre-macOS.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = Source/Mac/MasterPassword.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/External/Mac\"",
+				);
+				GCC_PREFIX_HEADER = "Source/MasterPassword-Prefix.pch";
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(PROJECT_DIR)/../lib/libsodium/build-macos~/out/include\"",
+					"\"$(PROJECT_DIR)/../lib/libjson-c/build-macos~/out/include\"",
+				);
+				INFOPLIST_FILE = "Source/Mac/MasterPassword-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(PROJECT_DIR)/../lib/libsodium/build-macos~/out/lib\"",
+					"\"$(PROJECT_DIR)/../lib/libjson-c/build-macos~/out/lib\"",
+				);
+				OTHER_CFLAGS = (
+					"-DMPW_SODIUM=1",
+					"-DMPW_CPERCIVA=0",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.spectre.macOS;
+				PRODUCT_NAME = "Spectre-macOS";
+				SKIP_INSTALL = NO;
+			};
+			name = Debug;
+		};
+		DA5BFA6F147E415C00F98B1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAE566B2E28F8C1EBBD3DA25 /* Pods-Spectre-macOS.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = Source/Mac/MasterPassword.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/External/Mac\"",
+				);
+				GCC_PREFIX_HEADER = "Source/MasterPassword-Prefix.pch";
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(PROJECT_DIR)/../lib/libsodium/build-macos~/out/include\"",
+					"\"$(PROJECT_DIR)/../lib/libjson-c/build-macos~/out/include\"",
+				);
+				INFOPLIST_FILE = "Source/Mac/MasterPassword-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(PROJECT_DIR)/../lib/libsodium/build-macos~/out/lib\"",
+					"\"$(PROJECT_DIR)/../lib/libjson-c/build-macos~/out/lib\"",
+				);
+				OTHER_CFLAGS = (
+					"-DMPW_SODIUM=1",
+					"-DMPW_CPERCIVA=0",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.spectre.macOS;
+				PRODUCT_NAME = "Spectre-macOS";
+				SKIP_INSTALL = NO;
+			};
+			name = Release;
+		};
+		DA6774401A474A03004F356A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CODE_SIGN_IDENTITY = "-";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(PROJECT_DIR)/../lib/libsodium/build-macos~/out/include\"",
+					"\"$(PROJECT_DIR)/../lib/libjson-c/build-macos~/out/include\"",
+					/usr/include/libxml2,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(PROJECT_DIR)/../lib/libsodium/build-macos~/out/lib\"",
+					"\"$(PROJECT_DIR)/../lib/libjson-c/build-macos~/out/lib\"",
+				);
+				OTHER_CFLAGS = (
+					"-DMPW_SODIUM=1",
+					"-DMPW_CPERCIVA=0",
+				);
+			};
+			name = Debug;
+		};
+		DA6774411A474A03004F356A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CODE_SIGN_IDENTITY = "-";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(PROJECT_DIR)/../lib/libsodium/build-macos~/out/include\"",
+					"\"$(PROJECT_DIR)/../lib/libjson-c/build-macos~/out/include\"",
+					/usr/include/libxml2,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(PROJECT_DIR)/../lib/libsodium/build-macos~/out/lib\"",
+					"\"$(PROJECT_DIR)/../lib/libjson-c/build-macos~/out/lib\"",
+				);
+				OTHER_CFLAGS = (
+					"-DMPW_SODIUM=1",
+					"-DMPW_CPERCIVA=0",
+				);
+			};
+			name = Release;
+		};
+		DAADCC5F19FB006500987B1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+			};
+			name = Debug;
+		};
+		DAADCC6019FB006500987B1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+			};
+			name = Release;
+		};
+		DAB7AE441F3D466D00C856B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DAB7AE451F3D466D00C856B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DAB7AE461F3D466D00C856B1 /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Test;
+		};
+		DAC63275148680650075AEA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DSTROOT = /tmp/jrswizzle.dst;
+				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		DAC63276148680650075AEA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DSTROOT = /tmp/jrswizzle.dst;
+				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		DAC77CB5148291A600BCF976 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_PREFIX_HEADER = "External/Pearl/Pearl-Prefix.pch";
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/External/Pearl/Pearl-Crypto/lib\"",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		DAC77CB6148291A600BCF976 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_PREFIX_HEADER = "External/Pearl/Pearl-Prefix.pch";
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/External/Pearl/Pearl-Crypto/lib\"",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA1C7AB21F1A8F24009A3551 /* Build configuration list for PBXNativeTarget "mpw-cli" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA1C7AB31F1A8F24009A3551 /* Debug */,
+				DA1C7AB41F1A8F24009A3551 /* Release */,
+				DA1C7AB51F1A8F24009A3551 /* Test */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Test;
+		};
+		DA1C7AD21F1A8FD8009A3551 /* Build configuration list for PBXNativeTarget "mpw-bench" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA1C7AD31F1A8FD8009A3551 /* Debug */,
+				DA1C7AD41F1A8FD8009A3551 /* Release */,
+				DA1C7AD51F1A8FD8009A3551 /* Test */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Test;
+		};
+		DA5B0B621F3D416500B663F0 /* Build configuration list for PBXLegacyTarget "libsodium-macos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA5B0B631F3D416500B663F0 /* Debug */,
+				DA5B0B641F3D416500B663F0 /* Release */,
+				DA5B0B651F3D416500B663F0 /* Test */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Test;
+		};
+		DA5BFA3E147E415C00F98B1E /* Build configuration list for PBXProject "Spectre-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA5BFA6B147E415C00F98B1E /* Debug */,
+				DA5BFA6C147E415C00F98B1E /* Release */,
+				DA0974431E956FA600F0BFE8 /* Test */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Test;
+		};
+		DA5BFA6D147E415C00F98B1E /* Build configuration list for PBXNativeTarget "Spectre-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA5BFA6E147E415C00F98B1E /* Debug */,
+				DA5BFA6F147E415C00F98B1E /* Release */,
+				DA0974441E956FA600F0BFE8 /* Test */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Test;
+		};
+		DA67743F1A474A03004F356A /* Build configuration list for PBXNativeTarget "mpw-test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA6774401A474A03004F356A /* Debug */,
+				DA6774411A474A03004F356A /* Release */,
+				DA0974481E956FA600F0BFE8 /* Test */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Test;
+		};
+		DAADCC5E19FB006500987B1D /* Build configuration list for PBXNativeTarget "KCOrderedAccessorFix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAADCC5F19FB006500987B1D /* Debug */,
+				DAADCC6019FB006500987B1D /* Release */,
+				DA0974471E956FA600F0BFE8 /* Test */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Test;
+		};
+		DAB7AE431F3D466D00C856B1 /* Build configuration list for PBXLegacyTarget "libjson-c-macos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAB7AE441F3D466D00C856B1 /* Debug */,
+				DAB7AE451F3D466D00C856B1 /* Release */,
+				DAB7AE461F3D466D00C856B1 /* Test */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Test;
+		};
+		DAC63274148680650075AEA5 /* Build configuration list for PBXNativeTarget "jrswizzle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAC63275148680650075AEA5 /* Debug */,
+				DAC63276148680650075AEA5 /* Release */,
+				DA0974461E956FA600F0BFE8 /* Test */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Test;
+		};
+		DAC77CB7148291A600BCF976 /* Build configuration list for PBXNativeTarget "Pearl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAC77CB5148291A600BCF976 /* Debug */,
+				DAC77CB6148291A600BCF976 /* Release */,
+				DA0974451E956FA600F0BFE8 /* Test */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Test;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DA5BFA3B147E415C00F98B1E /* Project object */;
+}

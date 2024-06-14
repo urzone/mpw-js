@@ -1,0 +1,95 @@
+### HERO
+enable: true
+
+banner:
+  enabled: false
+  title: RELEASE
+  body: Spectre is coming to iPhone and iPad! [Pre-order](https://apps.apple.com/app/apple-store/id1526402806?pt=153897&ct=homepage&mt=8&platform=iphone) now for *free* and Spectre will install automatically on October 31st.
+  button:
+    enable: true
+    label: Pre-order
+    link: https://apps.apple.com/app/apple-store/id1526402806?pt=153897&ct=homepage&mt=8&platform=iphone
+
+title: |
+  Reclaim ownership,  
+  delete your passwords
+content: >
+  Goodbye password&nbsp;managers, hello&nbsp;digital&nbsp;independence.
+cta:
+  title: Get Started with Spectre
+  icon: fa-brands fa-app-store-ios
+  link: https://apps.apple.com/app/apple-store/id1526402806?pt=153897&ct=homepage&mt=8&platform=iphone
+  alternative:
+    title: Want to stay up-to-date on privacy-first password security?
+    label: Sign me up!
+    link: https://c98682eb.sibforms.com/serve/MUIEAALK5a-qHeuTFFRibFOHGFbHswQwku9o1vZPLa7V9KgVtKTSrHf-uo86mZCfwVfEX4cfwkjcsRsFIfB6YDaez_aygD-hOTtUSeuXXmxdDz9XR4yiRf1qPbVF2WiAZ-BM30nn5gtd4h5RQLjmrlxjhU_0ZfDR53T5lVpIXU-rlAy1nwoc0ERv4t7fp_S4bg8suuuNUdchV_os
+
+platforms:
+  links:
+    - platform: web
+#     cta: Download Spectre
+      title: Web
+      icon: fa-globe
+      released: true
+      link: https://spectre.pw
+
+    - platform: desktop
+#     cta: Download Spectre
+      title: Desktop
+      icon: fa-brands fa-windows
+      link: https://gitlab.com/spectre.app/desktop
+
+    - platform: macos
+#     cta: Download Spectre
+      title: macOS
+      icon: fa-brands fa-apple
+      link: https://gitlab.com/spectre.app/macos
+
+    - platform: terminal
+#     cta: Download Spectre
+      title: Terminal (POSIX)
+      icon: fa-terminal
+      link: https://gitlab.com/spectre.app/cli
+
+    - platform: ios
+#     cta: Download Spectre
+      title: iPhone / iPad
+      icon: fa-brands fa-app-store-ios
+      link: https://apps.apple.com/app/apple-store/id1526402806?pt=153897&ct=homepage&mt=8&platform=iphone
+
+    - platform: android
+#     cta: Download Spectre
+      title: Android
+      icon: fa-brands fa-android
+      link: https://gitlab.com/spectre.app/android
+
+    - platform: api
+#     cta: Download Spectre
+      title: Development
+      icon: fa-code
+      link: https://gitlab.com/spectre.app/api
+
+demo:
+  notes:
+    heading: "Try out the *Spectre* algorithm:"
+    footer: "This information never leaves this page."
+
+  userName:
+    title: Your Full Name
+    icon: fa-user-large
+    placeholder: eg. Robert Lee Mitchell
+
+  userSecret:
+    title: Your Spectre Secret
+    icon: fa-user-lock
+    placeholder: eg. banana colored duckling
+
+  siteName:
+    title: Site Domain
+    icon: fa-globe
+    placeholder: eg. twitter.com
+
+  sitePassword:
+    title: Site Password
+    icon: spectre-light-glyph.svg
+    placeholder: PozoLalv0_Yelo

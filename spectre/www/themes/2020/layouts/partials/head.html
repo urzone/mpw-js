@@ -1,0 +1,35 @@
+<head>
+    <meta charset="utf-8">
+    <title>{{ .Title }}</title>
+
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with site.Params.description }}{{ . }}{{ end }}{{ end }}">
+    <meta name="keywords" content="{{ with .Keywords }}{{ . }}{{ else }}{{ with site.Params.keywords }}{{ . }}{{ end }}{{ end }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#3E8989">
+    <meta property="og:image" content="{{ site.Params.image }}">
+    <meta name="twitter:card" content="app">
+    <meta name="twitter:app:id:iphone" content="1526402806">
+    <meta name="twitter:app:name:iphone" content="Spectre">
+    <meta name="twitter:app:url:iphone" content="spectre://">
+    {{ hugo.Generator }}
+    {{ with site.Params.author }}
+    {{ with .name }}<meta name="author" content="{{ . }}">{{ end }}
+    {{ with .link }}<link rel="author" href="{{ . }}">{{ end }}
+    {{ end }}
+    <link rel="icon" href="{{ .Params.icon | default site.Params.icon | absURL }}">
+    {{ range .AlternativeOutputFormats -}}
+    <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ $.Site.Title | safeHTML }}" />
+    {{ end -}}
+    
+    <link rel="stylesheet" href="{{ `plugins/bootstrap/bootstrap.min.css` | absURL }}">
+    <link rel="stylesheet" href="{{ `plugins/fontawesome/css/all.min.css` | absURL }}">
+    <link rel="stylesheet" href="{{ `plugins/magnific-popup/magnific-popup.min.css` | absURL }}">
+
+    {{ $style := resources.Get "css/base.css" | minify | fingerprint }}
+<!--    <link rel="stylesheet" href="{{ $style.Permalink }}" media="screen" integrity="{{ $style.Data.Integrity }}">-->
+    <link rel="stylesheet" href="{{ $style.Permalink }}" media="screen">
+    {{ $style := resources.Get "css/spectre-www.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}" media="screen">
+
+    <script defer src="{{ `plugins/jquery/jquery.min.js` | absURL }}"></script>
+</head>

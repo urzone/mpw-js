@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+set -e
+
+cd "${BASH_SOURCE%/*}/.."
+tag=$(git describe --exact-match --match '*-cli*') || { echo >&2 "Tree is not at a release tag."; exit 1; }
+version=$(git describe --match '*-cli*' --long --dirty --broken)
+[[ $version != *-dirty ]] || { echo >&2 "Tree is dirty, first commit any changes."; exit 1; }
+
+spectreArchive=spectre-$version.tar.gz
+[[ -e $spectreArchive ]] && echo >&2 "WARNING: $spectreArchive already exists.  Will overwrite."
+read -n1 -p "Will prepare and release $spectreArchive.  Press a key to continue or ^C to abort."
+
+echo "Cleaning .."
+git clean -ffdx .
+
+echo "Creating archive $spectreArchive .."
+echo "$version" > VERSION
+git show --show-signature --pretty=format:%H --quiet "$tag" > TAG
+{ git ls-files -z .; printf '%s\0' VERSION TAG; } | xargs -0 tar -Lcvzf "$spectreArchive"
+
+echo "Creating archive signature $spectreArchive.sig .."
+gpg --detach-sign --local-user 5C2D1D61853F20F2FCDDCCB70EF21226F43EA6BC "$spectreArchive"
+
+echo "Installing archive and signature in site .."
+cd ../../public/site
+mv "$OLDPWD/$spectreArchive" .; [[ -e $_ ]]
+mv "$OLDPWD/$spectreArchive.sig" .; [[ -e $_ ]]
+ln -sf "$spectreArchive" "spectre-cli.tar.gz"; [[ -e $_ ]]
+ln -sf "$spectreArchive.sig" "spectre-cli.tar.gz.sig"; [[ -e $_ ]]
+
+echo
+echo "Done.  Ready to publish the site."
+echo "     package: $spectreArchive"
+echo "   signature: $spectreArchive.sig"
+echo "         url: https://spectre.app/$spectreArchive"

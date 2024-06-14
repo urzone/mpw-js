@@ -1,0 +1,40 @@
+############################# usage ###################################
+enable: true
+name: Usage
+title: How does it work?
+
+items:
+  - title: Sign in to Spectre
+    partial: "usage-account.html"
+    body: |
+      Open the *Spectre* app. Your own, your friend's &ndash; any app, anywhere.  
+      Enter your full name and your personal *Spectre* secret to sign in.
+
+      <sub>Pro-tip for choosing your *Spectre* secret: absurd word&nbsp;combinations!  
+      `wild berry yelling`, `freshly exhasperated kitten`. You&nbsp;try&nbsp;one.</sub>
+
+  - title: Name a website
+    partial: "usage-site.html"
+    body: |
+      Use only the site's domain name, drop the rest:  
+      <code><s>https://mobile.</s><u><strong>twitter.com</strong></u><s>/spectre_app</s></code>  
+
+      <sub>Your site password comes directly from your&nbsp;sign-in&nbsp;information in step [`1`].  
+      Think of a calculator; `you + site = password`, like&nbsp;`2 + 3 = 5`&#65279;,&nbsp;every&nbsp;time.</sub>
+    break: true
+
+  - title: Upgrade your account&nbsp;security
+    partial: "usage-upgrade.html"
+    body: |
+      First time using *Spectre* for this&nbsp;site?  
+      Change your old account&nbsp;password into *Spectre*'s generated password.
+      
+      <sub>From now on, you don't need to save your password for this&nbsp;site&nbsp;anymore.</sub>
+
+  - title: Log in securely
+    partial: "usage-login.html"
+    body: |
+      From now on, just log&nbsp;in with your site's *Spectre*&nbsp;password.
+
+      <sub>Share your site passwords with friends, if you like.  
+      _Under no circumstances_ tell anyone else your&nbsp;personal&nbsp;Spectre&nbsp;secret.</sub>

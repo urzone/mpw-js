@@ -1,0 +1,79 @@
+{{ with (index site.Data site.Language.Lang).footer }}
+{{ if .enable }}
+<footer id="footer">
+    <div class="container">
+        <div class="row wow fadeInUp" data-wow-duration="500ms">
+            {{ range .items }}
+            <div class="col-sm-{{ .twelfths }}">
+                <h4>{{ .title | markdownify }}</h4>
+                {{ with .links }}
+                <ul>
+                    {{ range . }}
+                    <li><a href="{{ .link }}" class="page-scroll">
+                        {{ with .icon }}<i class="fa-duotone fa-fw {{ . }}"></i>{{ end }}
+                        {{ .title | markdownify }}
+                    </a></li>
+                    {{ end }}
+                </ul>
+                {{ end }}
+                {{ with .pages }}
+                <ul>
+                    {{ range first 4 (where site.RegularPages "Section" "==" .)}}
+                    <li class="caption">
+                        <a href="{{ .Permalink }}">{{ .Title }}</a><br>
+                        {{ .Date.Format "2006-01-02" }}
+                    </li>
+                    {{ end }}
+                </ul>
+                {{ end }}
+            </div>
+            {{ end }}
+
+            <div class="col-12 text-center">
+                <div class="copyright">
+                    <a href="{{ site.Home.Permalink }}">
+                        <img src="{{ site.Params.logo | absURL }}" alt="{{ site.Title }}" height="42"/>
+                    </a>
+                    <br>
+                    <p>{{ .copyright | markdownify }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+{{ end }}
+{{ end }}
+
+<script defer src="{{ `plugins/bootstrap/bootstrap.bundle.min.js` | absURL }}"></script>
+<script defer src="{{ `plugins/ua-parser/ua-parser.min.js` | absURL }}"></script>
+<script defer src="{{ `plugins/tsparticles/tsparticles.min.js` | absURL }}"></script>
+<script defer src="{{ `plugins/magnific-popup/jquery.magnific-popup.min.js` | absURL }}"></script>
+
+{{ $script := resources.Get "js/script.js" | minify | fingerprint }}
+<!--<script defer src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}"></script>-->
+<script defer src="{{ $script.Permalink }}"></script>
+
+{{ with site.Params.cloudflare_token }}
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ . }}"}'></script>
+{{ end }}
+
+{{ with site.Params.freshdesk_widget }}
+<script>
+    window.fwSettings={
+        'widget_id': "{{ . }}"
+    };
+    !function(){if("function"!=typeof window.FreshworksWidget){var n=function(){n.q.push(arguments)};n.q=[],window.FreshworksWidget=n}}()
+</script>
+<script defer src="https://euc-widget.freshworks.com/widgets/{{ . }}.js"></script>
+{{ end }}
+{{ with site.Params.freshchat_token }}
+<script defer type="module">
+    function initFreshChat() {
+        window.fcWidget.init({
+            token: "{{ . }}",
+            host: "https://wchat.eu.freshchat.com"
+        });
+    }
+    function initialize(i,t){var e;i.getElementById(t)?initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,e.src="https://wchat.eu.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}function initiateCall(){initialize(document,"freshchat-js-sdk")}window.addEventListener?window.addEventListener("load",initiateCall,!1):window.attachEvent("load",initiateCall,!1);
+</script>
+{{ end }}

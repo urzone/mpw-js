@@ -1,0 +1,52 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "ASN1Swift",
+        "repositoryURL": "https://github.com/tikhop/ASN1Swift",
+        "state": {
+          "branch": null,
+          "revision": "b53bee03a942623db25afc5bfb80227b2cb3b425",
+          "version": "1.2.4"
+        }
+      },
+      {
+        "package": "Countly",
+        "repositoryURL": "https://github.com/Countly/countly-sdk-ios",
+        "state": {
+          "branch": null,
+          "revision": "51a22dc9c040c4f6fccef7db3edef16d58dead12",
+          "version": "21.11.2"
+        }
+      },
+      {
+        "package": "Sentry",
+        "repositoryURL": "https://github.com/getsentry/sentry-cocoa",
+        "state": {
+          "branch": null,
+          "revision": "f906913c14eadb6fd31988db1ea9ff10aec9f198",
+          "version": "7.18.1"
+        }
+      },
+      {
+        "package": "swift-collections",
+        "repositoryURL": "https://github.com/apple/swift-collections",
+        "state": {
+          "branch": null,
+          "revision": "48254824bb4248676bf7ce56014ff57b142b77eb",
+          "version": "1.0.2"
+        }
+      },
+      {
+        "package": "TPInAppReceipt",
+        "repositoryURL": "https://github.com/tikhop/TPInAppReceipt",
+        "state": {
+          "branch": null,
+          "revision": "2b9946f8fe2dd74ed87dfcb5dbedc3be06c5ccab",
+          "version": "3.3.3"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

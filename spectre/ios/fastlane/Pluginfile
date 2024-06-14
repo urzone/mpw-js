@@ -1,0 +1,2 @@
+gem 'fastlane-plugin-sentry', path: "/Users/lhunath/workspace/local/sentry-fastlane-plugin"
+gem 'fastlane-plugin-versioning'

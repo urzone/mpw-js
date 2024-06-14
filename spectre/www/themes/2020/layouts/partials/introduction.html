@@ -1,0 +1,38 @@
+{{ with (index site.Data site.Language.Lang).introduction }}
+{{ if .enable }}
+<section id="introduction">
+    <div class="container">
+        <h1><a href="#introduction">{{ .name | markdownify }}</a></h1>
+
+        {{ with .intro }}
+        <div class="row justify-content-center">
+            <div class="col-lg-8">{{ . | markdownify }}</div>
+        </div>
+        {{ end }}
+
+        {{ with .aside }}
+        <aside>
+            {{ range . }}
+            <a href="{{ .link }}" class="btn btn-transparent">
+                <i class='{{ if not (in .icon " ") }}fa-duotone fa-fw{{ end }} {{ .icon }}' style='background: url("/images/{{ .icon }}") no-repeat center/contain'></i>
+                {{ .title }}
+            </a>
+            {{ end }}
+        </aside>
+        {{ end }}
+
+        {{ with .callout }}
+        <h2>{{ . | markdownify }}</h2>
+        {{ end }}
+
+        {{ with .closing }}
+        <hr/>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-8">{{ . | markdownify }}</div>
+        </div>
+        {{ end }}
+    </div>
+</section>
+{{ end }}
+{{ end }}

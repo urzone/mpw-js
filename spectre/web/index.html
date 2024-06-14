@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Spectre Web</title>
+        <meta name="description" content="Password manager and secure identity platform. Spectre is a free and offline password cipher." />
+        <meta name="keywords" content="password manager,password generator,passwords,free,secure,strong,random,online,offline,privacy,web" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="theme-color" content="#3E8989">
+        <meta property="og:image" content="images/product/environment/spectre-dark-desk.jpg">
+        <meta name="apple-itunes-app" content="app-id=1526402806" />
+        <meta name="twitter:card" content="app">
+        <meta name="twitter:app:id:iphone" content="1526402806">
+        <meta name="twitter:app:name:iphone" content="Spectre">
+        <meta name="twitter:app:url:iphone" content="spectre://">
+        <meta name="author" content="Maarten Billemont">
+        <link rel="author" href="https://lhunath.com">
+        <link rel="icon" href="images/spectre.png">
+        <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="css/spectre-base.css" media="screen">
+        <link rel="stylesheet" href="css/spectre-web.css" media="screen">
+        <script defer src="plugins/jquery/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <div class="banner">
+            <div class="container">
+                <h4>Alpha Version</h4>
+                <p>You are trying out a pre-release of Spectre's web version.</p>
+                <a href="https://gitlab.com/spectre.app/web/" class="btn btn-transparent">Source Code</a>
+            </div>
+        </div>
+
+        <section id="application">
+            <div id="user" class="container" data-active="true">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 text-center box">
+                        <i class="fa-duotone fa-user-circle"></i>
+                        <hr>
+
+                        <form>
+                            <p>
+                                <label id="userName">
+                                    <i class="fa-duotone fa-fw fa-user-large"></i>
+                                    Your Full Name
+                                    <input type="text" placeholder="eg. Robert Lee Mitchell" autocomplete="username">
+                                </label>
+                            </p>
+
+                            <p>
+                                <label id="userSecret">
+                                    <i class="fa-duotone fa-fw fa-user-lock"></i>
+                                    Your Spectre Secret
+                                    <i class="fa-duotone fa-fw fa-galaxy fa-spin"></i>
+                                    <input type="password" placeholder="eg. banana colored duckling" autocomplete="current-password">
+                                </label>
+                            </p>
+
+                            <p>
+                                <label id="algorithmVersion">
+                                    <i class="fa-duotone fa-fw fa-rectangle-vertical-history"></i>
+                                    Algorithm Version
+                                    <select>
+                                        <option value="0">V0 (2012:03)</option>
+                                        <option value="1">V1 (2012:07)</option>
+                                        <option value="2">V2 (2014:09)</option>
+                                        <option value="3" selected>V3 (2015:01)</option>
+                                    </select>
+                                </label>
+                            </p>
+
+                            <hr>
+    
+                            <p class="info"></p>
+                            <p class="error"></p>
+    
+                            <p>
+                                <button type="submit" id="signin">
+                                    <i class="fa-duotone fa-fw fa-2x fa-right-to-bracket"></i><br>
+                                    Sign In
+                                </button>
+                            </p>
+                        </form>
+
+                        <p class="caption">Your information remains 100% offline.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="site" class="container" data-active="false">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 text-center box">
+                        <i class="fa-duotone fa-globe"></i>
+                        <hr>
+
+                        <form>
+                            <p>
+                                <label id="siteName">
+                                    <i class="fa-duotone fa-fw fa-globe"></i>
+                                    Site Domain
+                                    <input type="text" placeholder="eg. twitter.com">
+                                </label>
+                            </p>
+                            
+                            <p>&nbsp;</p>
+
+                            <p>
+                                <input type="radio" name="sitePurpose" id="sitePurposePassword" value="com.lyndir.masterpassword">
+                                <label for="sitePurposePassword">Site Password</label>
+                                <input type="radio" name="sitePurpose" id="sitePurposeLogin" value="com.lyndir.masterpassword.login">
+                                <label for="sitePurposeLogin">Site Login Name</label>
+                                <input type="radio" name="sitePurpose" id="sitePurposeAnswer" value="com.lyndir.masterpassword.answer">
+                                <label for="sitePurposeAnswer">Site Security Answer</label>
+                            </p>
+
+                            <hr>
+    
+                            <p>
+                                <label id="siteCounter">
+                                    <i class="fa-duotone fa-fw fa-rectangle-vertical-history"></i>
+                                    Site Counter
+                                    <input type="number" placeholder="1" min="1" max="100" value="1" class="half" />
+                                </label>
+                            </p>
+    
+                            <p>
+                                <label id="siteType">
+                                    <i class="fa-duotone fa-fw fa-rectangle-vertical-history"></i>
+                                    Type
+                                    <select></select>
+                                </label>
+                            </p>
+    
+                            <p>
+                                <label id="siteResult">
+                                    <i class="fa-duotone fa-fw" style="background: url('images/spectre-light-glyph.svg') no-repeat center/contain"></i>
+                                    Result
+                                    <i class="fa-duotone fa-fw fa-galaxy fa-spin"></i>
+                                    <button type="submit" class="fa-solid fa-copy">
+                                        <input class="code" value="PozoLalv0_Yelo" readonly="">
+                                    </button>
+                                </label>
+                            </p>
+                        </form>
+
+                        <p class="info"></p>
+                        <p class="error"></p>
+
+                        <hr>
+
+                        <p>
+                            <button type="submit" id="signout">
+                                <i class="fa-duotone fa-fw fa-2x fa-right-from-bracket"></i><br>
+                                Sign Out
+                            </button>
+                        </p>
+
+                        <p class="caption">Your information remains 100% offline.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer">
+            <div class="container">
+                <div class="row wow fadeInUp" data-wow-duration="500ms">
+                    <div class="col-12 text-center">
+                        <div class="copyright">
+                            <a href="https://spectre.app/">
+                                <img src="images/spectre-light.png" alt="Spectre: Passwords, Privacy-first" height="42">
+                            </a>
+                            <br>
+                            <p>Copyright © 2011 <a href="https://lhunath.com">Maarten Billemont</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script defer src="plugins/bootstrap/bootstrap.bundle.min.js"></script>
+        <script defer src="js/spectre/spectre-types.js"></script>
+        <script defer src="js/spectre/spectre-service.js"></script>
+        <script defer src="js/main.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,25 @@
+# Generated
+Podfile.lock
+Gemfile.lock
+Pods
+design/icon
+
+# OS
+.DS_Store
+Thumbs.db
+*~
+
+# IntelliJ
+.idea
+
+# Xcode
+xcuserdata
+.build
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+fastlane/notes.md
+fastlane/*.log

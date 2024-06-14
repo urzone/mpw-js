@@ -1,0 +1,61 @@
+{{ with (index site.Data site.Language.Lang).beta }}
+{{ if .enable }}
+
+{{ $beta_js := resources.Get "js/beta.js" | minify | fingerprint }}
+<!--<script defer src="{{ $beta_js.Permalink }}" integrity="{{ $beta_js.Data.Integrity }}"></script>-->
+<script defer src="{{ $beta_js.Permalink }}"></script>
+
+<section id="beta">
+    <div class="container">
+        <h1><a href="#beta">{{ .name | markdownify }}</a></h1>
+        <h2>{{ .title | markdownify }}</h2>
+
+        <div class="row">
+            {{ with .info }}
+            <div class="col-sm">
+                <h3>{{ .title | markdownify }}</h3>
+                <p> {{ .body | markdownify }} </p>
+
+                <div>
+                    {{ range .links }}
+                    <div class="con-info clearfix">
+                        <i class='{{ if not (in .icon " ") }}fa-solid fa-fw{{ end }} {{ .icon }}' style='background: url("/images/{{ .icon }}") no-repeat center/contain'></i>
+                        <label>{{ .label | markdownify }}</label>
+                        <a href="{{ .link }}">{{ .title | markdownify }}</a>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+            {{ end }}
+
+            {{ with .form }}
+            {{ if .enable }}
+            <div class="col-sm wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
+                <form method="post" action="{{ .action }}" role="form">
+                    {{ range .fields }}
+                    {{ if eq .type "textarea" }}
+                    <textarea rows="6" placeholder="{{ .label }}" name="{{ .name }}" id="{{ .name }}"></textarea>
+                    {{ else if eq .type "select" }}
+                    <select name="{{ .name }}" id="{{ .name }}">
+                        {{ range .options }}
+                        <option value="{{ .name }}">{{ .label }}</option>
+                        {{ end }}
+                    </select>
+                    {{ else }}
+                    <input type="{{ .type }}" placeholder="{{ .label }}" name="{{ .name }}" id="{{ .name }}">
+                    {{ end }}
+                    {{ end }}
+
+                    <button>{{ .submit }}</button>
+
+                    <p class="info"></p>
+                    <p class="error"></p>
+                </form>
+            </div>
+            {{ end }}
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}
+{{ end }}

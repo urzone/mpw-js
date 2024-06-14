@@ -1,0 +1,23 @@
+{{ with (index site.Data site.Language.Lang).principles }}
+{{ if .enable }}
+<section id="principles">
+    <div class="container">
+        <h1><a href="#principles">{{ .name | markdownify }}</a></h1>
+        <h2>{{ .title | markdownify }}</h2>
+        <h3>{{ .subtitle | markdownify }}</h3>
+
+        <div class="row">
+            {{ range .items }}
+            <div class="col-md-6 col-lg-4 my-1 my-lg-0">
+                <div class="box">
+                    <i class='{{ if not (in .icon " ") }}fa-duotone fa-fw{{ end }} {{ .icon }}' style='background: url("/images/{{ .icon }}") no-repeat center/contain'></i>
+                    <h3>{{ .title | markdownify }}</h3>
+                    <p>{{ .body | markdownify }}</p>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}
+{{ end }}

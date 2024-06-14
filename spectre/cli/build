@@ -1,0 +1,250 @@
+#!/usr/bin/env bash
+#
+# USAGE
+#   [targets='...'] [spectre_feature=0|1 ...] [CFLAGS='...'] [LDFLAGS='...'] ./build [-v|-d|-h|--] [cc arguments ...]
+#
+#   By default, you should only need to run ./build
+#
+#   -v: verbose mode, outputs state information and compiler commands.
+#   -d: debug build, modifies default build flags to produce binaries best suited for debugging.
+#   -h: show this usage information.
+#
+#   You can customize the targets that are built using targets='...'. Use targets='all' to build all targets.
+#   By default, we only build the 'spectre' target.  
+#   See targets_all for all possible targets as well as the features they support and require.
+#
+#   Several features can be enabled or disabled using feature flags.
+#   See the Features section for an overview of the features, their default setting, their meaning and their dependencies.
+#   You will need to have each of the feature's dependencies installed for the build to succeed with that feature enabled.
+#
+#   Finally, the C compiler can be tuned using CFLAGS, LDFLAGS and compiler arguments passed to the script.
+#
+# BUGS
+#   support@spectre.app
+#
+# AUTHOR
+#   Maarten Billemont
+#
+cd "${BASH_SOURCE%/*}"
+shopt -s extglob
+set -e
+
+
+### CONFIGURATION
+verbose=0
+
+# Options
+while getopts :vdh opt; do
+    case $opt in
+        v)      verbose=1 ;;
+        d)      debug=1 ;;
+        h|?)    sed -n '/^[^#]/q;p' "${BASH_SOURCE##*/}"; exit ;;
+    esac
+done
+shift "$(( OPTIND - 1 ))"
+
+# Targets to build
+targets_all=(
+    spectre                     # C CLI version of Spectre (needs: spectre_sodium, optional: spectre_color, spectre_json).
+    spectre-bench               # C CLI Spectre benchmark utility (needs: spectre_sodium).
+    spectre-tests               # C Spectre algorithm test suite (needs: spectre_sodium, spectre_xml).
+)
+targets_default='spectre'       # Override with: targets='...' ./build
+targets=${targets[*]:-$targets_default} 
+
+# Features
+spectre_sodium=${spectre_sodium:-1} # Implement crypto functions with sodium (depends on libsodium).
+spectre_json=${spectre_json:-1}     # Support JSON-based user configuration format (depends on libjson-c).
+spectre_color=${spectre_color:-1}   # Colorized identicon (depends on libncurses).
+spectre_xml=${spectre_xml:-1}       # XML parsing (depends on libxml2).
+
+# Default build flags
+cflags=( -O3 $CFLAGS ); unset CFLAGS
+ldflags=( $LDFLAGS ); unset LDFLAGS
+if (( debug )); then
+    cflags+=( -O0 -g )
+fi
+
+# Version
+if { spectre_version=$(git describe --match '*-cli*' --long --dirty) || spectre_version=$(<VERSION); } 2>/dev/null; then
+    cflags+=( -D"MP_VERSION=$spectre_version" )
+fi
+echo "Current spectre source version ${spectre_version:-<unknown>}..."
+
+# Meta
+if (( verbose )); then
+    echo "spectre_sodium=${spectre_sodium}, spectre_json=${spectre_json}, spectre_color=${spectre_color}, spectre_xml=${spectre_xml}"
+    echo "CFLAGS: ${cflags[*]}"
+    echo "LDFLAGS: ${ldflags[*]}"
+    echo "targets: ${targets[*]}"
+fi
+
+
+### TARGET: SPECTRE
+spectre() {
+    # dependencies
+    use_spectre_sodium required
+    use_spectre_color optional
+    use_spectre_json optional
+
+    # target
+    cflags=(
+        "${cflags[@]}"
+
+        # spectre paths
+        -I"api/c" -I"src"
+    )
+    ldflags=(
+        "${ldflags[@]}"
+    )
+
+    # build
+    cc "${cflags[@]}" "$@" \
+       "api/c/aes.c" "api/c/spectre-algorithm.c" \
+       "api/c/spectre-algorithm_v0.c" "api/c/spectre-algorithm_v1.c" "api/c/spectre-algorithm_v2.c" "api/c/spectre-algorithm_v3.c" \
+       "api/c/spectre-types.c" "api/c/spectre-util.c" "api/c/spectre-marshal-util.c" "api/c/spectre-marshal.c" "src/spectre-cli-util.c" \
+       "${ldflags[@]}" "src/spectre-cli.c" -o "spectre"
+    echo "done!  You can now run ./spectre-cli-tests, ./install or use ./$_"
+}
+
+
+### TARGET: SPECTRE-BENCH
+spectre-bench() {
+    # dependencies
+    use_spectre_sodium required
+
+    # target
+    cflags=(
+        "${cflags[@]}"
+
+        # spectre paths
+        -I"api/c" -I"src"
+    )
+    ldflags=(
+        "${ldflags[@]}"
+    )
+
+    # build
+    cc "${cflags[@]}" "$@" \
+       "api/c/aes.c" "api/c/spectre-algorithm.c" \
+       "api/c/spectre-algorithm_v0.c" "api/c/spectre-algorithm_v1.c" "api/c/spectre-algorithm_v2.c" "api/c/spectre-algorithm_v3.c" \
+       "api/c/spectre-types.c" "api/c/spectre-util.c" \
+       "${ldflags[@]}" "src/spectre-bench.c" -o "spectre-bench"
+    echo "done!  You can now use ./$_"
+}
+
+
+### TARGET: SPECTRE-TESTS
+spectre-tests() {
+    # dependencies
+    use_spectre_sodium required
+    use_spectre_xml required
+
+    # target
+    cflags=(
+        "${cflags[@]}"
+
+        # spectre paths
+        -I"api/c" -I"src"
+    )
+    ldflags=(
+        "${ldflags[@]}"
+    )
+
+    # build
+    cc "${cflags[@]}" "$@" \
+       "api/c/aes.c" "api/c/spectre-algorithm.c" \
+       "api/c/spectre-algorithm_v0.c" "api/c/spectre-algorithm_v1.c" "api/c/spectre-algorithm_v2.c" "api/c/spectre-algorithm_v3.c" \
+       "api/c/spectre-types.c" "api/c/spectre-util.c" "src/spectre-tests-util.c" \
+       "${ldflags[@]}" "src/spectre-tests.c" -o "spectre-tests"
+    echo "done!  You can now use ./$_"
+}
+
+
+### TOOLS
+haslib() {
+    cc -x c "${ldflags[@]}" -l"$1" -o /dev/null - <<< 'int main() { return 0; }' &>/dev/null
+}
+cc() (
+    (( verbose )) && set -x
+
+    if { hash "$CC"; } 2>/dev/null; then
+        "$CC" -std=c11 "$@"
+    elif { hash clang; } 2>/dev/null; then
+        clang -std=c11 "$@"
+    elif { hash llvm-gcc; } 2>/dev/null; then
+        llvm-gcc -std=c11 "$@"
+    elif { hash gcc; } 2>/dev/null; then
+        gcc -std=c11 "$@"
+    else
+        echo >&2 "Need a compiler.  Please install GCC or LLVM."
+        exit 1
+    fi
+)
+
+
+### DEPENDENCIES
+use() {
+    local option=$1 requisite=$2 lib=$3; shift 3
+    local enabled=${!option} found=0 _cflags _ldflags
+
+    if (( enabled )); then
+        for lib in "$lib" "$@"; do
+            if _cflags=$(pkg-config --cflags "$lib" 2>/dev/null) && _ldflags=$(pkg-config --libs "$lib" 2>/dev/null); then
+                cflags+=( $_cflags ) ldflags+=( $_ldflags ); found=1
+            elif _cflags=$(pkg-config --cflags "lib$lib" 2>/dev/null) && _ldflags=$(pkg-config --libs "lib$lib" 2>/dev/null); then
+                cflags+=( $_cflags ) ldflags+=( $_ldflags ); found=1
+            elif haslib "$lib"; then
+                ldflags+=( -l"$lib" ); found=1
+            fi
+        done
+
+        if (( found )); then
+            echo "INFO:     Enabled $option (lib$lib)."
+            return 0
+
+        elif [[ $requisite == required ]]; then
+            echo >&2 "ERROR:    $option was enabled but is missing $lib library.  Please install this library before continuing."
+            exit 1
+
+        else
+            echo >&2 "WARNING:  $option was enabled but is missing $lib library.  Will continue with $option disabled!"
+            return 1
+
+        fi
+
+    elif [[ $requisite == required ]]; then
+        echo >&2 "ERROR:    $option was required but is not enabled.  Please enable the option or remove this target before continuing."
+        exit 1
+
+    else
+        echo "INFO:     $option is supported but not enabled."
+        return 1
+    fi
+}
+use_spectre_sodium() {
+    local requisite=$1
+    use spectre_sodium "$requisite" sodium && cflags+=( -D"SPECTRE_SODIUM=1" ) ||:
+}
+use_spectre_color() {
+    local requisite=$1
+    use spectre_color "$requisite" curses tinfo && cflags+=( -D"SPECTRE_COLOR=1" ) ||:
+}
+use_spectre_json() {
+    local requisite=$1
+    use spectre_json "$requisite" json-c && cflags+=( -D"SPECTRE_JSON=1" ) ||:
+}
+use_spectre_xml() {
+    local requisite=$1
+    use spectre_xml "$requisite" xml2 && cflags+=( $(xml2-config --cflags) ) ldflags+=( $(xml2-config --libs) ) ||:
+}
+
+
+### BUILD TARGETS
+for target in "${targets_all[@]}"; do
+    if [[ $targets == 'all' || " $targets " = *" $target "*  ]]; then
+        echo
+        echo "Building target: $target..."
+        ( "$target" "$@" )
+    fi
+done

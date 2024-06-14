@@ -1,0 +1,50 @@
+# Spectre website
+baseURL: "https://spectre.app/"
+languageCode: "en"
+title: "Spectre: Passwords, Privacy-first"
+theme: "2020"
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  logo: "/images/spectre-light.png"
+  icon: "/images/spectre.png"
+  image: "/images/product/environment/spectre-dark-desk.jpg"
+  name: "Spectre"
+  description: "Password manager and secure identity platform. Spectre is a free and offline password cipher. Privacy-first. Coming to web, iOS, Android, Windows, macOS, Linux."
+  keywords: "password manager,password generator,passwords,free,secure,strong,random,online,offline,privacy,ios,iphone,android,windows,macos,linux"
+  author:
+    name: "Maarten Billemont"
+    link: "https://lhunath.com"
+
+languages:
+  en:
+    weight: 1
+    home: "Home"
+
+    menu:
+      main:
+        - name: "Principles"
+          url: "/#principles"
+          weight: 1
+        - name: "Usage"
+          url: "/#usage"
+          weight: 2
+        - name: "Features"
+          url: "/#features"
+          weight: 3
+        - name: "Blog"
+          url: "/#blog"
+          weight: 4
+        - pre: "<i class='fa-duotone fa-fw fa-comments'></i>"
+          name: "Community"
+          url: "https://chat.spectre.app"
+          weight: 5
+#       - name: "Beta"
+#         url: "/#beta"
+#         weight: 6
+        - name: "About"
+          url: "/about"
+          weight: 7

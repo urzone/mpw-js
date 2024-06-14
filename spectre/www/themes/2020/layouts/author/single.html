@@ -1,0 +1,57 @@
+{{ define "main" }}
+
+{{ partial "navigation.html" . }}
+
+<section id="document" class="author">
+    <div class="container">
+        <header>
+            <h2>Introducing</h2>
+            <figure>
+                {{ if .Params.Image }}
+                <img loading="lazy"
+                     class="rounded-circle"
+                     data-background="{{ .Params.image_bg }}"
+                     {{ with .Params.image_size }}height="{{ . }}"{{ end }}
+                     src="{{ .Params.Image | absURL }}">
+                {{else if .Params.Email}}
+                <img loading="lazy"
+                     class="rounded-circle"
+                     data-background="{{ .Params.image_bg }}"
+                     {{ with .Params.image_size }}height="{{ . }}"{{ end }}
+                     src="https://www.gravatar.com/avatar/{{ md5 .Params.email }}?s=128&pg&d=identicon">
+                {{ end }}
+                <figcaption>
+                    <h3 class="font-weight-bold">
+                        {{ .Title }}
+                    </h3>
+                </figcaption>
+            </figure>
+            {{ with .Params.Description }}<p class="caption">{{ . | markdownify }}</p>{{ end }}
+            {{ with .Params.Social }}
+            <ul class="list-inline">
+                {{ range . }}
+                <li class="list-inline-item"><a href="{{ .link | safeURL}}">
+                    <i class='{{ if not (in .icon " ") }}fa-solid fa-fw{{ end }} {{ .icon }}' style='background: url("/images/{{ .icon }}") no-repeat center/contain'></i>
+                </a></li>
+                {{ end }}
+            </ul>
+            {{ end }}
+        </header>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="title text-center">
+                    <h2>{{ i18n "authorsPosts" }}</h2>
+                </div>
+            </div>
+            {{ range where site.RegularPages "Params.author" .Title }}
+            {{ .Render "article" }}
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}
