@@ -2,40 +2,35 @@
   SECTION: HERO
  *================================================================*/
 
-.banner {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 0.5em;
-    font-size: smaller;
-    z-index: 1;
-}
-
-.banner .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1em;
-}
-
-.banner .container > * {
+html, body {
     margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Prevents scrolling */
+    display: flex;
+    flex-direction: column;
 }
 
 #application {
-    position: relative;
+    flex: 1; /* Ensures #application takes up all available space except for the footer */
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    background: none,
-    radial-gradient(62vh 150vh at 0 -50vh, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)),
-    radial-gradient(62vh 150vh at 100% -50vh, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+    width: 100%;
+    background: radial-gradient(62vh 150vh at 0 -50vh, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)),
+                radial-gradient(62vh 150vh at 100% -50vh, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+    padding: 1em; /* Optional: padding around the application content */
 }
 
 #application .container {
-    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 2em;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden; /* Prevents scrolling within the container */
 }
 
 #application div[data-active="false"] {
@@ -43,18 +38,81 @@
 }
 
 #application div[data-active="true"] {
-    display: block;
-    transition: all .38s ease-in 0s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    transition: all 0.38s ease-in 0s;
 }
 
 #application .box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     border: 1px solid var(--panel-contrast);
     background: rgba(var(--panel-contrast-rgb), 0.4);
+    padding: 0.2em; /* Added padding for better spacing */
+    width: 100%; /* Ensures box takes full width of its container */
+    max-width: 600px; /* Limits the maximum width of the box */
+    box-sizing: border-box; /* Ensures padding is included in the width calculation */
+}
+
+#application .box form {
+    flex: 1; /* Ensures form takes up available space */
 }
 
 #application .box .caption {
-    position: absolute;
-    right: 0;
-    bottom: 0.2em;
-    left: 0;
+    text-align: center;
+    margin-top: 0.1em; /* Ensures there's space above the caption */
+}
+
+footer#footer {
+    width: 100%;
+    padding: 0.5em 0;
+    text-align: center;
+/*    background-color: #fff ; /* Optional: background color for the footer */*/
+    z-index: 1;
+}
+
+footer#footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+footer#footer .container .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer#footer .copyright {
+    margin: 0;
+}
+
+/* Radio buttons container for responsive layout */
+.radio-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.2em;
+}
+
+.radio-buttons label {
+    margin-right: 0.5em;
+}
+
+@media (max-width: 600px) {
+    .radio-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .radio-buttons label {
+        margin-right: 0;
+    }
 }
