@@ -19,7 +19,8 @@
         <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
         <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css">
         <link rel="stylesheet" href="css/spectre-base.css" media="screen">
-        <link rel="stylesheet" href="css/spectre-web.css" media="screen">
+        <!-- <link rel="stylesheet" href="css/spectre-web.css" media="screen">   -->
+        <link rel="stylesheet" href="css/spectre-modern.css" media="screen">                
         <script defer src="plugins/jquery/jquery.min.js"></script>
     </head>
 
@@ -143,12 +144,17 @@
 
                         <hr>
 
-                        <p>
-                            <button type="submit" id="signout">
-                                <i class="fa-duotone fa-fw fa-2x fa-right-from-bracket"></i><br>
-                                Sign Out
-                            </button>
-                        </p>
+                        <form>
+                            <p>
+                                <button type="submit" id="signout">
+                                    <span class="button-content">
+                                        <i class="fa-duotone fa-fw fa-2x fa-right-from-bracket"></i>
+                                        <br>
+                                        Sign Out
+                                    </span>
+                                </button>
+                            </p>
+                        </form>
 
                         <p class="caption">Your information remains 100% offline.</p>
                     </div>
