@@ -1,25 +1,40 @@
 :root {
     --primary: #036242;        /* Keep the core color */
-    --primary-light: #036242;  /* Brighter, more vibrant light version */
-    --primary-dark: #036242;   /* True darker shade of primary  */
-    --background: #036242;     /* Very Dark Gray for better contrast */
-    --surface: #036242;       /* Dark Gray with a hint of warmth */
+    --primary-light: #04734f;  /* Brighter, more vibrant light version */
+    --primary-dark: #024831;   /* True darker shade of primary  */
+    --background: #0a1a1a;     /* Very Dark Gray for better contrast */
+    --surface: #0f2a2a;       /* Dark Gray with a hint of warmth */
     --text: #f5f5f5;       /* Soft Off-White for main text */
     --text-secondary: #a0a0a0;  /* Medium Gray for secondary text */
-     /* Less contrasting overlay for subtle depth */
-    --panel-contrast: rgba(255, 255, 255, 0.03);
+    --panel-contrast: rgba(255, 255, 255, 0.05); /* Less contrasting overlay for subtle depth */
     --panel-contrast-rgb: 255, 255, 255; /* same */
-    --shadow: rgba(0, 0, 0, 0.1);      /* Reduced opacity for subtle shadow */
-    --accent: #036242;       /* Complimenting subtle teal  */
-    --hover-background: rgba(255, 255, 255, 0.06); /* slightly more visible on hover*/
+    --shadow: rgba(0, 0, 0, 0.2);      /* Increased opacity for more defined shadow */
+    --accent: #04b489;       /* Complimenting subtle teal  */
+    --hover-background: rgba(255, 255, 255, 0.08); /* slightly more visible on hover*/
+    --neon-glow: 0 0 5px rgba(4, 180, 137, 0.5), 0 0 10px rgba(4, 180, 137, 0.3); /* Tech-inspired glow effect */
 
     --control-text: #000000;
-    --control-fill: #036242;
-    --control-contrast: #036242;
+    --control-fill: #04b489;
+    --control-contrast: #04b489;
 
-    --body-fill-rgb: #036242;
-    --body-focus: #024831;
+    --body-fill-rgb: 10, 26, 26;
+    --body-focus: #04b489;
 
+    /* Grid system */
+    --grid-gap: 1rem;
+}
+
+/* Hide scrollbar but keep scrolling functionality */
+::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+    width: 0;
+    height: 0;
+}
+
+/* Hide scrollbar for Firefox */
+html {
+    scrollbar-width: none;
+    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
 }
 
 html, body {
@@ -27,15 +42,16 @@ html, body {
     padding: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    overflow-y: auto; /* Enables vertical scrolling */
     display: flex;
     flex-direction: column;
     background-color: var(--background);
     color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Source Code Pro', monospace; /* More tech/code-like font */
 }
 
-
+/* Tech-inspired grid background */
 #application {
     flex: 1;
     display: flex;
@@ -43,8 +59,11 @@ html, body {
     justify-content: center;
     width: 100%;
     background: 
+        linear-gradient(rgba(3, 98, 66, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(3, 98, 66, 0.05) 1px, transparent 1px),
         radial-gradient(62vh 150vh at 0 -50vh, rgba(3, 98, 66, 0.15), rgba(0, 0, 0, 0)),
         radial-gradient(62vh 150vh at 100% -50vh, rgba(3, 98, 66, 0.15), rgba(0, 0, 0, 0));
+    background-size: 20px 20px, 20px 20px, 100% 100%, 100% 100%;
     padding: 1.5rem;
 }
 
@@ -55,7 +74,7 @@ html, body {
     padding: 2rem;
     max-width: 100%;
     max-height: 100%;
-    overflow: hidden;
+    overflow-y: auto; /* Enable vertical scrolling */
 }
 
 #application div[data-active="false"] {
@@ -71,20 +90,27 @@ html, body {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Futuristic box with tech-inspired borders */
 #application .box {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 1px solid var(--panel-contrast);
+    border: 1px solid var(--primary-light);
     background: var(--surface);
     padding: 1.5rem;
     width: 100%;
     max-width: 600px;
     box-sizing: border-box;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px var(--shadow);
+    border-radius: 8px; /* Sharper corners for tech look */
+    box-shadow: 0 8px 24px var(--shadow), var(--neon-glow);
     backdrop-filter: blur(12px);
+    /* Tech-inspired border effect */
+    background-image: 
+        linear-gradient(var(--surface), var(--surface)),
+        linear-gradient(135deg, rgba(4, 180, 137, 0.5) 0%, transparent 50%, rgba(4, 180, 137, 0.5) 100%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
 }
 
 #application .box form {
@@ -96,6 +122,51 @@ html, body {
     margin-top: 1rem;
     color: var(--text-secondary);
     font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+/* Tech-inspired form elements */
+input, select, button {
+    border-radius: 4px !important;
+    border: 1px solid rgba(4, 180, 137, 0.3) !important;
+    background: rgba(10, 26, 26, 0.7) !important;
+    transition: all 0.2s ease-in-out !important;
+}
+
+input:focus, select:focus {
+    border-color: var(--primary-light) !important;
+    box-shadow: 0 0 0 2px rgba(4, 180, 137, 0.2) !important;
+    outline: none !important;
+}
+
+button {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark)) !important;
+    border: none !important;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.3s ease !important;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--neon-glow) !important;
+}
+
+button:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
+    z-index: -1;
+}
+
+button:hover:after {
+    left: 100%;
 }
 
 footer#footer {
@@ -103,7 +174,7 @@ footer#footer {
     padding: 1rem 0;
     text-align: center;
     background-color: var(--surface);
-    border-top: 1px solid var(--panel-contrast);
+    border-top: 1px solid var(--primary-dark);
 }
 
 footer#footer .container {
@@ -125,6 +196,7 @@ footer#footer .copyright {
     font-size: 0.9rem;
 }
 
+/* Tech-inspired radio buttons */
 .radio-buttons {
     display: flex;
     flex-direction: row;
@@ -141,6 +213,8 @@ footer#footer .copyright {
     cursor: pointer;
     color: var(--text-secondary);
     transition: color 0.2s ease;
+    font-family: 'Source Code Pro', monospace;
+    letter-spacing: 0.5px;
 }
 
 .radio-buttons label:hover {
@@ -156,14 +230,35 @@ footer#footer .copyright {
     margin: 0;
     cursor: pointer;
     transition: all 0.2s ease;
+    position: relative;
 }
 
 .radio-buttons input[type="radio"]:checked {
     border-color: var(--primary);
-    background-color: var(--primary);
+    background-color: transparent;
     box-shadow: 0 0 0 2px var(--surface), 0 0 0 4px var(--primary-dark);
 }
 
+.radio-buttons input[type="radio"]:checked:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--primary-light);
+    box-shadow: 0 0 4px var(--primary-light);
+}
+
+/* Icons with tech glow effect */
+.fa-duotone {
+    color: var(--primary-light);
+    text-shadow: var(--neon-glow);
+}
+
+/* Responsive adjustments */
 @media (max-width: 600px) {
     .radio-buttons {
         flex-direction: column;
@@ -177,23 +272,4 @@ footer#footer .copyright {
     #application .box {
         padding: 1rem;
     }
-}
-
-/* Optional: Add custom scrollbar styles */
-::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--surface);
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--primary);
-    border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--primary-light);
 }
